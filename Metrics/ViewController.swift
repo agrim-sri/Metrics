@@ -7,10 +7,22 @@
 
 import UIKit
 import RealityKit
+import ARKit
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendererDelegate {
     
     @IBOutlet var arView: ARView!
+    
+    //ARKit
+    let sessionConfiguration = ARWorldTrackingConfiguration()
+//    guard let referenceObjects = ARReferenceObject.referenceObjects(inGroupNamed: "gallery", bundle: nil) else {
+//        fatalError("Message expected asset catalog resource.")
+//    }
+//    confirguration.detectionObjects = referenceObjects
+//    sceneView.session.run(configuration)
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
