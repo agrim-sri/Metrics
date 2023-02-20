@@ -14,6 +14,7 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendere
     
     @IBOutlet var arView: ARView!
     
+    @IBOutlet weak var shareButton: UIButton!
     //ARKit
     let sessionConfiguration = ARWorldTrackingConfiguration()
 //    guard let referenceObjects = ARReferenceObject.referenceObjects(inGroupNamed: "gallery", bundle: nil) else {
@@ -21,7 +22,7 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendere
 //    }
 //    confirguration.detectionObjects = referenceObjects
 //    sceneView.session.run(configuration)
-    
+
     
     
     override func viewDidLoad() {
@@ -33,4 +34,13 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendere
         // Add the box anchor to the scene
 //        arView.scene.anchors.append(boxAnchor)
         }
+    
+    @IBAction func shareButtonTapped(_ sender: UIButton) {
+        let shareText = "Check out this cool thing I found!"
+            let shareURL = URL(string: "https://www.example.com/cool-thing")!
+
+            let activityViewController = UIActivityViewController(activityItems: [shareText, shareURL], applicationActivities: nil)
+
+            present(activityViewController, animated: true, completion: nil)
+    }
 }
