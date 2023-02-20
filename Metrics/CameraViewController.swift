@@ -10,7 +10,7 @@ import RealityKit
 import ARKit
 
 
-class ViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendererDelegate {
+class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendererDelegate {
     
     @IBOutlet var arView: ARView!
     
@@ -28,9 +28,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendererDeleg
         super.viewDidLoad()
         
         // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
-        
+//        let boxAnchor = try! Experience.loadBox()
+//
         // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
-    }
+//        arView.scene.anchors.append(boxAnchor)
+        }
 }

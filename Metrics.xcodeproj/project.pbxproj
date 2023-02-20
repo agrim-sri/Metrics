@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E76636429A38EA80066E67A /* FYPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E76636329A38EA80066E67A /* FYPViewController.swift */; };
+		9E76636629A38ED70066E67A /* WorkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E76636529A38ED70066E67A /* WorkTableViewController.swift */; };
+		9E76636829A38EEA0066E67A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E76636729A38EEA0066E67A /* ProfileViewController.swift */; };
+		9E76636F29A397270066E67A /* WorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E76636E29A397270066E67A /* WorkTableViewCell.swift */; };
 		9EF2023429857EDA00CA87FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF2023329857EDA00CA87FD /* AppDelegate.swift */; };
-		9EF2023629857EDA00CA87FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF2023529857EDA00CA87FD /* ViewController.swift */; };
+		9EF2023629857EDA00CA87FD /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF2023529857EDA00CA87FD /* CameraViewController.swift */; };
 		9EF2023829857EDA00CA87FD /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 9EF2023729857EDA00CA87FD /* Experience.rcproject */; };
 		9EF2023B29857EDA00CA87FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EF2023929857EDA00CA87FD /* Main.storyboard */; };
 		9EF2023D29857EDB00CA87FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EF2023C29857EDB00CA87FD /* Assets.xcassets */; };
@@ -36,9 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E76636329A38EA80066E67A /* FYPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYPViewController.swift; sourceTree = "<group>"; };
+		9E76636529A38ED70066E67A /* WorkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTableViewController.swift; sourceTree = "<group>"; };
+		9E76636729A38EEA0066E67A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9E76636E29A397270066E67A /* WorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTableViewCell.swift; sourceTree = "<group>"; };
 		9EF2023029857EDA00CA87FD /* Metrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF2023329857EDA00CA87FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9EF2023529857EDA00CA87FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9EF2023529857EDA00CA87FD /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		9EF2023729857EDA00CA87FD /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		9EF2023A29857EDA00CA87FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9EF2023C29857EDB00CA87FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,11 +107,15 @@
 			isa = PBXGroup;
 			children = (
 				9EF2023329857EDA00CA87FD /* AppDelegate.swift */,
-				9EF2023529857EDA00CA87FD /* ViewController.swift */,
+				9EF2023529857EDA00CA87FD /* CameraViewController.swift */,
+				9E76636529A38ED70066E67A /* WorkTableViewController.swift */,
+				9E76636329A38EA80066E67A /* FYPViewController.swift */,
+				9E76636729A38EEA0066E67A /* ProfileViewController.swift */,
 				9EF2023729857EDA00CA87FD /* Experience.rcproject */,
 				9EF2023929857EDA00CA87FD /* Main.storyboard */,
 				9EF2023C29857EDB00CA87FD /* Assets.xcassets */,
 				9EF2023E29857EDB00CA87FD /* LaunchScreen.storyboard */,
+				9E76636E29A397270066E67A /* WorkTableViewCell.swift */,
 			);
 			path = Metrics;
 			sourceTree = "<group>";
@@ -256,7 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EF2023629857EDA00CA87FD /* ViewController.swift in Sources */,
+				9E76636829A38EEA0066E67A /* ProfileViewController.swift in Sources */,
+				9E76636F29A397270066E67A /* WorkTableViewCell.swift in Sources */,
+				9E76636429A38EA80066E67A /* FYPViewController.swift in Sources */,
+				9E76636629A38ED70066E67A /* WorkTableViewController.swift in Sources */,
+				9EF2023629857EDA00CA87FD /* CameraViewController.swift in Sources */,
 				9EF2023429857EDA00CA87FD /* AppDelegate.swift in Sources */,
 				9EF2023829857EDA00CA87FD /* Experience.rcproject in Sources */,
 			);
