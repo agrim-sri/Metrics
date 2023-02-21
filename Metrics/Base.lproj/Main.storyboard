@@ -41,12 +41,12 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Lidar"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIU-wT-Npu">
-                                <rect key="frame" x="323" y="423" width="66" height="50"/>
+                                <rect key="frame" x="315" y="415" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" buttonSize="large">
-                                    <imageReference key="image" image="circle.inset.filled" catalog="system" symbolScale="large"/>
+                                    <backgroundConfiguration key="background" image="circle.inset.filled" catalog="system"/>
                                 </buttonConfiguration>
                             </button>
                         </subviews>
@@ -54,29 +54,29 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="7cH-by-Z89">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="T7B-0j-UWP">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ef2-8y-R55">
-                                <rect key="frame" x="20" y="5" width="48" height="34"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="zP6-UJ-58v">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="LyP-EX-yFU">
+                                <rect key="frame" x="20" y="2" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system"/>
-                                <connections>
-                                    <action selector="shareButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vIB-eL-JE1"/>
-                                </connections>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="square.and.arrow.up" catalog="system"/>
+                                </buttonConfiguration>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="FxG-kz-8MK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="MFj-mm-BIg">
-                                <rect key="frame" x="345" y="5" width="49" height="34"/>
+                                <rect key="frame" x="354" y="2" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plus.square.dashed" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="plus.square.dashed" catalog="system"/>
+                                </buttonConfiguration>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="arView" destination="rYP-Yc-R9o" id="ctY-Nz-mZe"/>
-                        <outlet property="shareButton" destination="ef2-8y-R55" id="xca-58-Ypg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -384,12 +384,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Nb-Bu-yPX">
-                                            <rect key="frame" x="87" y="-27" width="240" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <viewLayoutGuide key="contentLayoutGuide" id="PhS-7V-dOM"/>
-                                            <viewLayoutGuide key="frameLayoutGuide" id="pT9-a2-wem"/>
-                                        </scrollView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saved Furnitures" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDE-UK-1pR">
                                             <rect key="frame" x="20" y="11" width="167" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -415,15 +409,15 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Username" id="lAf-p8-tTE">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="6v0-WA-18x">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="CCm-Wl-FNy">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="CCm-Wl-FNy">
                                 <rect key="frame" x="312" y="0.0" width="82" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="gearshape" catalog="system"/>
+                                <connections>
+                                    <segue destination="80h-LW-oE1" kind="show" id="SWi-qq-HBh"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="80h-LW-oE1" kind="show" id="eN7-p7-X2C"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
