@@ -800,9 +800,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
-                                <connections>
-                                    <segue destination="as1-un-cWF" kind="show" id="Xy9-qW-47M"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oHa-Na-GMn"/>
@@ -819,118 +816,54 @@
             </objects>
             <point key="canvasLocation" x="4479.7101449275369" y="1844.8660714285713"/>
         </scene>
-        <!--Sign Up-->
+        <!--View Controller-->
         <scene sceneID="BvZ-cV-BVz">
             <objects>
-                <viewController id="as1-un-cWF" customClass="CreateAccountViewController" customModule="Metrics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="as1-un-cWF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16H-bs-YGd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qmo-WI-3rk">
-                                <rect key="frame" x="125" y="418" width="165" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qmo-WI-3rk">
+                                <rect key="frame" x="125" y="590" width="165" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Create an Account"/>
-                                <connections>
-                                    <action selector="signupClicked:" destination="as1-un-cWF" eventType="touchUpInside" id="LuC-bY-jRy"/>
-                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IIJ-hA-dRo">
-                                <rect key="frame" x="101" y="262" width="235" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JIr-Ml-KAr">
-                                <rect key="frame" x="101" y="340" width="235" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="x1C-J4-F7h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="JIr-Ml-KAr" firstAttribute="top" secondItem="IIJ-hA-dRo" secondAttribute="bottom" constant="44" id="X3Q-JY-qrB"/>
-                            <constraint firstItem="Qmo-WI-3rk" firstAttribute="top" secondItem="JIr-Ml-KAr" secondAttribute="bottom" constant="44" id="dqg-uI-gpw"/>
-                            <constraint firstItem="IIJ-hA-dRo" firstAttribute="top" secondItem="x1C-J4-F7h" secondAttribute="top" constant="170" id="vQ3-57-YcJ"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign Up" largeTitleDisplayMode="never" id="m3V-oj-FLK"/>
-                    <connections>
-                        <outlet property="emailTextField" destination="IIJ-hA-dRo" id="mRV-z3-iu5"/>
-                        <outlet property="passwordTextField" destination="JIr-Ml-KAr" id="xek-Kd-wxJ"/>
-                        <segue destination="Z02-TP-Cen" kind="show" identifier="goToNext" id="4sM-Yy-bIN"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ik-sp-7N2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5315" y="2116"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="t4L-h8-tz2">
-            <objects>
-                <viewController id="Z02-TP-Cen" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zre-jV-WqE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="OKJ-Ne-03e"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="srR-LC-UMs"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O18-Sk-g5X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6407" y="1784"/>
-        </scene>
         <!--Login-->
         <scene sceneID="jls-Xc-s8E">
             <objects>
-                <viewController id="zD4-Es-rPh" customClass="LoginViewController" customModule="Metrics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zD4-Es-rPh" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QY2-CO-rJB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ole-af-juQ">
-                                <rect key="frame" x="175" y="418" width="66" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ole-af-juQ">
+                                <rect key="frame" x="175" y="534" width="66" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
-                                <connections>
-                                    <action selector="loginClicked:" destination="zD4-Es-rPh" eventType="touchUpInside" id="Zdk-h8-sya"/>
-                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rKd-NT-9bJ">
-                                <rect key="frame" x="91" y="262" width="235" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUL-xk-kwk">
-                                <rect key="frame" x="91" y="340" width="235" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HTo-h4-zGC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ole-af-juQ" firstAttribute="top" secondItem="ZUL-xk-kwk" secondAttribute="bottom" constant="44" id="6pv-mI-ZTa"/>
-                            <constraint firstItem="ZUL-xk-kwk" firstAttribute="top" secondItem="rKd-NT-9bJ" secondAttribute="bottom" constant="44" id="EmL-YA-iHv"/>
-                            <constraint firstItem="rKd-NT-9bJ" firstAttribute="top" secondItem="HTo-h4-zGC" secondAttribute="top" constant="170" id="dwk-qy-6Y0"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" largeTitleDisplayMode="never" id="mOE-lc-U0g"/>
-                    <connections>
-                        <outlet property="emailTextField" destination="rKd-NT-9bJ" id="SgM-CU-Dor"/>
-                        <outlet property="passwordTextField" destination="ZUL-xk-kwk" id="EtN-bE-xjG"/>
-                        <segue destination="Z02-TP-Cen" kind="show" identifier="goToNext" id="xTH-7x-nJd"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Login" id="mOE-lc-U0g"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZY-Go-38I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5292.753623188406" y="1295.7589285714284"/>
+            <point key="canvasLocation" x="5293" y="1296"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="xTH-7x-nJd"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Metrics" width="500" height="500"/>
         <image name="apple.logo" catalog="system" width="105" height="128"/>
