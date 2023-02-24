@@ -217,16 +217,7 @@
                             <outlet property="delegate" destination="ren-ej-ude" id="n0J-ej-ULb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Design Your Space" id="Bvd-iZ-8QK">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="fkC-uC-DHd">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dzC-yg-XOg">
-                                <rect key="frame" x="-37" y="-17" width="92" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Design Your Space" id="Bvd-iZ-8QK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRP-5a-qY1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
