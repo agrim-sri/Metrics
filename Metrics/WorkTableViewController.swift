@@ -16,12 +16,12 @@ class WorkTableViewController: UITableViewController {
     }
     
     let data : [Designs] = [
-        Designs(title: "Living Room", description: "Mapsko CasaBella 3BHK", imageName: "image2"),
-        Designs(title: "Wash Room", description: "DLF New Town Heights 3BHK", imageName: "image3"),
-        Designs(title: "Wash Room", description: "Mapsko CasaBella 3BHK", imageName: "image4"),
-        Designs(title: "Bed Room", description: "DLF Primus 3BHK", imageName: "image5"),
-        Designs(title: "Bed Room", description: "DLF New Town Heights 3BHK", imageName: "image6"),
-        Designs(title: "Bed Room", description: "DLF Phase 2 3BHK", imageName: "image7"),
+        Designs(title: "Living Room", description: "Mapsko CasaBella 3BHK", imageName: "Image 3"),
+        Designs(title: "Wash Room", description: "DLF New Town Heights 3BHK", imageName: "Image 2"),
+        Designs(title: "Wash Room", description: "Mapsko CasaBella 3BHK", imageName: "Image 4"),
+        Designs(title: "Bed Room", description: "DLF Primus 3BHK", imageName: "Image 5"),
+        Designs(title: "Bed Room", description: "DLF New Town Heights 3BHK", imageName: "Image 6"),
+        Designs(title: "Bed Room", description: "DLF Phase 2 3BHK", imageName: "Image 7"),
     ]
 
     override func viewDidLoad() {
@@ -56,7 +56,7 @@ class WorkTableViewController: UITableViewController {
         // Configure the cell...
         cell.titleLabel.text = Designs.title
         cell.descriptionLabel.text = Designs.description
-        //cell.iconImageView.image = UIImage(UIImage(named: Designs.imageName))
+        cell.iconImageView.image = UIImage(named: Designs.imageName)
 
         return cell
     }
