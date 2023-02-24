@@ -55,7 +55,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7cH-by-Z89">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="zP6-UJ-58v">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="LyP-EX-yFU">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="LyP-EX-yFU">
                                 <rect key="frame" x="20" y="2" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -475,6 +475,9 @@
                                     </subviews>
                                     <color key="backgroundColor" name="AccentColor"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="reY-z6-IxY" kind="show" id="mDd-lf-ZAW"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="71" id="oyc-AH-72W">
                                 <rect key="frame" x="0.0" y="120" width="414" height="71"/>
@@ -688,18 +691,165 @@
             </objects>
             <point key="canvasLocation" x="3753.6231884057975" y="1844.8660714285713"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="fVJ-9X-v1a">
+            <objects>
+                <viewController id="reY-z6-IxY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lD1-hW-hrc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Metrics" translatesAutoresizingMaskIntoConstraints="NO" id="yJQ-Kt-faf">
+                                <rect key="frame" x="32" y="38" width="336" height="233"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log in to Metrics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rY5-Jo-Z4b">
+                                <rect key="frame" x="126" y="203" width="163" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Overlay measurements to real world" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Drm-6p-5QN">
+                                <rect key="frame" x="77" y="250" width="273" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ts-CO-zzT">
+                                <rect key="frame" x="39" y="326" width="336" height="52"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Continue with Email"/>
+                                <connections>
+                                    <segue destination="zD4-Es-rPh" kind="show" id="ZJf-6j-I1N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dn-fa-oGa">
+                                <rect key="frame" x="40" y="407" width="336" height="52"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Continue with Google"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldt-Bn-Msz">
+                                <rect key="frame" x="40" y="497" width="336" height="52"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Continue with Apple"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47w-Rj-oBM">
+                                <rect key="frame" x="32" y="336" width="52" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="mail.stack" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xp4-mN-9xI">
+                                <rect key="frame" x="33" y="416" width="50" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="g.circle" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRx-4c-2yD">
+                                <rect key="frame" x="36" y="507" width="44" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="apple.logo" catalog="system"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7l-ji-aNB">
+                                <rect key="frame" x="62" y="644" width="216" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1O-2M-SBk">
+                                <rect key="frame" x="266" y="639" width="84" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oHa-Na-GMn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6dn-fa-oGa" firstAttribute="top" secondItem="0Ts-CO-zzT" secondAttribute="bottom" constant="30" id="N9t-pp-6lp"/>
+                            <constraint firstItem="ldt-Bn-Msz" firstAttribute="top" secondItem="6dn-fa-oGa" secondAttribute="bottom" constant="30" id="Vlc-rr-lHS"/>
+                            <constraint firstItem="0Ts-CO-zzT" firstAttribute="top" secondItem="yJQ-Kt-faf" secondAttribute="bottom" constant="55" id="vGj-Ht-XLE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Za9-Yu-o8Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sa9-Vx-LsZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4479.7101449275369" y="1844.8660714285713"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BvZ-cV-BVz">
+            <objects>
+                <viewController id="as1-un-cWF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="16H-bs-YGd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qmo-WI-3rk">
+                                <rect key="frame" x="125" y="590" width="165" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create an Account"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="x1C-J4-F7h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ik-sp-7N2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5315" y="2116"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="jls-Xc-s8E">
+            <objects>
+                <viewController id="zD4-Es-rPh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QY2-CO-rJB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ole-af-juQ">
+                                <rect key="frame" x="175" y="534" width="66" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HTo-h4-zGC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="mOE-lc-U0g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ZY-Go-38I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5293" y="1296"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Metrics" width="500" height="500"/>
+        <image name="apple.logo" catalog="system" width="105" height="128"/>
         <image name="bell.badge" catalog="system" width="125" height="128"/>
         <image name="briefcase" catalog="system" width="128" height="100"/>
         <image name="camera" catalog="system" width="128" height="93"/>
         <image name="circle.inset.filled" catalog="system" width="128" height="123"/>
         <image name="flag" catalog="system" width="128" height="121"/>
+        <image name="g.circle" catalog="system" width="128" height="123"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="hand.wave" catalog="system" width="128" height="128"/>
         <image name="lines.measurement.horizontal" catalog="system" width="128" height="93"/>
         <image name="location" catalog="system" width="128" height="121"/>
         <image name="lock" catalog="system" width="125" height="128"/>
+        <image name="mail.stack" catalog="system" width="128" height="122"/>
         <image name="message" catalog="system" width="128" height="116"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="plus.square.dashed" catalog="system" width="128" height="114"/>
@@ -718,6 +868,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
