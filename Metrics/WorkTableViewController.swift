@@ -8,38 +8,58 @@
 import UIKit
 
 class WorkTableViewController: UITableViewController {
+    
+    struct Designs {
+        let title: String
+        let description: String
+        let imageName: String
+    }
+    
+    let data : [Designs] = [
+        Designs(title: "Living Room", description: "Mapsko CasaBella 3BHK", imageName: "image2"),
+        Designs(title: "Wash Room", description: "DLF New Town Heights 3BHK", imageName: "image3"),
+        Designs(title: "Wash Room", description: "Mapsko CasaBella 3BHK", imageName: "image4"),
+        Designs(title: "Bed Room", description: "DLF Primus 3BHK", imageName: "image5"),
+        Designs(title: "Bed Room", description: "DLF New Town Heights 3BHK", imageName: "image6"),
+        Designs(title: "Bed Room", description: "DLF Phase 2 3BHK", imageName: "image7"),
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //table.dataSource = self
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return data.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        
+        let Designs = data[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WorkTableViewCell
+        
         // Configure the cell...
+        cell.titleLabel.text = Designs.title
+        cell.descriptionLabel.text = Designs.description
+        //cell.iconImageView.image = UIImage(UIImage(named: Designs.imageName))
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
