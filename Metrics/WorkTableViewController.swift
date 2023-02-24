@@ -14,6 +14,9 @@ class WorkTableViewController: UITableViewController {
         let description: String
         let imageName: String
     }
+
+    
+    lazy var searchBar = UISearchBar()
     
     let data : [Designs] = [
         Designs(title: "Living Room", description: "Mapsko CasaBella 3BHK", imageName: "Image 3"),
@@ -33,6 +36,11 @@ class WorkTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        searchBar.placeholder = "Search"
+        searchBar.barStyle = .default
+        searchBar.sizeToFit()
+        searchBar.isTranslucent = false
+        navigationItem.titleView = searchBar
     }
 
     // MARK: - Table view data source
