@@ -59,7 +59,7 @@ class WorkTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let Designs = data[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WorkTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "workTabCell", for: indexPath) as! WorkTableViewCell
         
         // Configure the cell...
         cell.titleLabel.text = Designs.title
