@@ -11,17 +11,20 @@ import UIKit
 struct Post {
     
     var createdBy: User
-    var timeAgo: String?
-    var caption: String?
-    var image: URL?
-    var numberOfLikes: Int?
-    var numberOfComments: Int?
-    var numberOfShares: Int?
+    //var timeAgo: String?
+    //var caption: String?
+    var image: String
+    //var numberOfLikes: Int?
+    //var numberOfComments: Int?
+    //var numberOfShares: Int?
     
-//    static func fetchPost() -> [Post] {
-//        var posts = [Post]()
-//        
-//        //let duc = User(
-//        
-//    }
+    static func fetchPost() -> [Post] {
+        var posts = [Post]()
+        
+        let agrim = User(username: "Agrim", profileImageURL: "macLabPhoto")
+        let post1 = Post(createdBy: agrim, image: "Macbook")
+        
+        return posts
+        
+    }
 }

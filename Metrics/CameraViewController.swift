@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SceneKit
 import RealityKit
 import ARKit
 
@@ -16,7 +17,7 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendere
     
     @IBOutlet weak var shareButton: UIButton!
     //ARKit
-    let sessionConfiguration = ARWorldTrackingConfiguration()
+    
 //    guard let referenceObjects = ARReferenceObject.referenceObjects(inGroupNamed: "gallery", bundle: nil) else {
 //        fatalError("Message expected asset catalog resource.")
 //    }
@@ -27,13 +28,31 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendere
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        let Configuration = ARWorldTrackingConfiguration()
+//        Configuration.planeDetection = .horizontal
         // Load the "Box" scene from the "Experience" Reality File
 //        let boxAnchor = try! Experience.loadBox()
 //
         // Add the box anchor to the scene
 //        arView.scene.anchors.append(boxAnchor)
         }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
+        arView.session.run(configuration, options: .resetTracking)
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        arView.session.pause()
+    }
+    
+    
+    // MARK: UI Button Actions
     
     @IBAction func shareButtonTapped(_ sender: UIButton) {
         let shareText = "Check out this cool thing I found!"

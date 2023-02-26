@@ -7,7 +7,9 @@
 
 import UIKit
 
-class FYPViewController: UIViewController, UITableViewDelegate {
+class FYPViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+  
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,33 +19,33 @@ class FYPViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        self.tableView.dataSource = self
-//        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        if let posts = posts {
-//            return posts.count
-//        }
-//
-//        return 0
-//    }
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if posts != nil {
-//            return 1
-//        }
-//        return 0
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: <#T##String#>, for: indexPath) as! FYPViewController
-//
-//        cell.posts = posts[indexPath.row]
-//        cell.selectionStyle = .none
-//
-//        return cell
-//    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if let posts = posts {
+            return posts.count
+        }
+
+        return 0
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if posts != nil {
+            return 1
+        }
+        return 0
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: <#T##String#>, for: indexPath) as! FYPViewController
+
+        cell.posts = posts[indexPath.row]
+        cell.selectionStyle = .none
+
+        return cell
+    }
     
 
 
