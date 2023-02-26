@@ -37,6 +37,9 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(SettingTableViewCell.self,
                        forCellReuseIdentifier: SettingTableViewCell.identifier)
+        table.register(SwitchTableViewCell.self,
+                       forCellReuseIdentifier: SwitchTableViewCell.identifier)
+        
         
         return table
     }()
@@ -57,21 +60,10 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func configure(){
         models.append(Section(title: "General", options: [
-            .staticCell(model: Settingsoption(title: "Wifi", icon: UIImage(systemName: "house"), iconBackgroundColor: .systemPink){
-                print("Tapped first cell")
+            .switchCell(model: SettingsSwitchOption(title: "Airplane Mode", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemRed, handler: {
                 
-            }),
-            .staticCell(model: Settingsoption(title: "Bluetooth", icon: UIImage(systemName: "bluetooth"), iconBackgroundColor: .link){
-                
-            }),
+            }, isOn: true)),
             
-                .staticCell(model: Settingsoption(title: "Airplane Mode", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemGreen){
-                    
-                }),
-            
-                .staticCell(model: Settingsoption(title: "iCloud", icon: UIImage(systemName: "cloud"), iconBackgroundColor: .systemOrange){
-                    
-                })
             
         ]))
         
@@ -141,7 +133,13 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             return cell
             
         case .switchCell(let model):
-            return UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.identifier,
+                for: indexPath) as? SwitchTableViewCell else {
+                return UITableViewCell()
+            }
+            
+            cell.configure(with: model)
+            return cell
         }
         
     }
