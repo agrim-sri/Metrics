@@ -322,7 +322,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="gearshape" catalog="system"/>
                                 <connections>
-                                    <segue destination="80h-LW-oE1" kind="show" id="SWi-qq-HBh"/>
+                                    <segue destination="8pa-iI-bc8" kind="show" id="2ef-rJ-OuX"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -331,6 +331,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmO-Pc-1Qy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2866.666666666667" y="1844.8660714285713"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="4TY-TE-dGG">
+            <objects>
+                <viewController id="8pa-iI-bc8" customClass="SettingsViewController" customModule="Metrics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0BX-6J-LdY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ugt-GW-P6d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k4A-St-a7U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQH-Qh-Xqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3699" y="2531"/>
         </scene>
         <!--Profile-->
         <scene sceneID="rjK-T1-Xi0">
@@ -598,7 +614,7 @@
             <objects>
                 <viewController id="reY-z6-IxY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lD1-hW-hrc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Metrics" translatesAutoresizingMaskIntoConstraints="NO" id="yJQ-Kt-faf">
@@ -717,7 +733,7 @@
             <objects>
                 <viewController id="zD4-Es-rPh" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QY2-CO-rJB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ole-af-juQ">
