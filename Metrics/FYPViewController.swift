@@ -7,14 +7,65 @@
 
 import UIKit
 
-class FYPViewController: UIViewController {
-
+class FYPViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+  
+    
+    
+    @IBOutlet weak var fypTableView: UITableView!
+    
+    var posts: [Post]?
+    
+    struct Storyboard {
+        static let postCell = "FYPPostCell"
+        static let postHeaderCell = "FYPPostHeaderCell"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.fypTableView.dataSource = self
+        self.fypTableView.delegate = self
+        self.fetchPosts()
     }
     
+    func fetchPosts() {
+        posts = Post.fetchPosts()
+        fypTableView.reloadData()
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if let posts = posts {
+            return posts.count
+        }
+
+        return 0
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if posts != nil {
+            return 1
+        }
+        return 0
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.postCell, for: indexPath) as! FYPPostTableViewCell
+
+        cell.post = posts?[indexPath.section]
+        //cell.selectionStyle = .none
+
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.postHeaderCell) as! FYPPostHeaderTableViewCell
+        
+        cell.post = posts?[section]
+        
+        return cell
+    }
+
 
     /*
     // MARK: - Navigation
