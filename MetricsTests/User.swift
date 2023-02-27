@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-
+/*
 class User {
     var username: String
     //var fullName: String
-    //var email: String
+//    var email: String
     var profileImage: String
     //var posts: [Post]
 
@@ -24,4 +24,10 @@ class User {
         //self.posts = posts
     }
 }
+*/
 
+struct User {
+    var username: String
+    var profileImage: String
+    var location: String
+}

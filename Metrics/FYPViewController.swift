@@ -11,7 +11,7 @@ class FYPViewController: UIViewController, UITableViewDelegate, UITableViewDataS
   
     
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var fypTableView: UITableView!
     
     var posts: [Post]?
     
@@ -24,14 +24,14 @@ class FYPViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.fypTableView.dataSource = self
+        self.fypTableView.delegate = self
         self.fetchPosts()
-//        self.tableView.dataSource = self
-//        self.tableView.delegate = self
     }
     
     func fetchPosts() {
         posts = Post.fetchPosts()
-        tableView.reloadData()
+        fypTableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -243,11 +243,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aet-9x-dXx">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="macLabPhoto" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aet-9x-dXx">
                                                     <rect key="frame" x="20" y="10" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="f1q-3p-Age"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRQ-xc-gys">
-                                                    <rect key="frame" x="68" y="11" width="200" height="23"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRQ-xc-gys">
+                                                    <rect key="frame" x="68" y="11" width="102.5" height="23"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Username"/>
@@ -259,9 +262,8 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Location"/>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhY-bZ-zvX">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhY-bZ-zvX">
                                                     <rect key="frame" x="369" y="23" width="25" height="14"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain">
                                                         <backgroundConfiguration key="background" image="ellipsis" catalog="system"/>
@@ -269,6 +271,7 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Aet-9x-dXx" firstAttribute="centerY" secondItem="DhY-bZ-zvX" secondAttribute="centerY" id="0Za-Ci-hQi"/>
                                                 <constraint firstItem="Aet-9x-dXx" firstAttribute="leading" secondItem="ryR-TT-1Y2" secondAttribute="leading" constant="20" id="6R8-NW-kPi"/>
                                                 <constraint firstItem="fRQ-xc-gys" firstAttribute="top" secondItem="ryR-TT-1Y2" secondAttribute="topMargin" id="8Fg-RS-ZXB"/>
                                                 <constraint firstItem="Aet-9x-dXx" firstAttribute="top" secondItem="ryR-TT-1Y2" secondAttribute="top" constant="10" id="8kQ-9a-k7E"/>
@@ -291,7 +294,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="445"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="doC-pN-Vh5">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Macbook" translatesAutoresizingMaskIntoConstraints="NO" id="doC-pN-Vh5">
                                                     <rect key="frame" x="20" y="11" width="374" height="378"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cye-Xl-Up4">
@@ -347,7 +350,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Metrics" largeTitleDisplayMode="never" id="tzA-8c-XG8"/>
                     <connections>
-                        <outlet property="tableView" destination="IMa-T7-2IZ" id="4ng-pa-RLC"/>
+                        <outlet property="fypTableView" destination="IMa-T7-2IZ" id="4ng-pa-RLC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bI-lf-Omf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -991,6 +994,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Macbook" width="768" height="1024"/>
         <image name="Metrics" width="500" height="500"/>
         <image name="apple.logo" catalog="system" width="105" height="128"/>
         <image name="arrow.turn.up.right" catalog="system" width="128" height="99"/>
@@ -1007,6 +1011,7 @@
         <image name="lines.measurement.horizontal" catalog="system" width="128" height="93"/>
         <image name="location" catalog="system" width="128" height="121"/>
         <image name="lock" catalog="system" width="125" height="128"/>
+        <image name="macLabPhoto" width="1086" height="724"/>
         <image name="mail.stack" catalog="system" width="128" height="122"/>
         <image name="message" catalog="system" width="128" height="116"/>
         <image name="person" catalog="system" width="128" height="121"/>

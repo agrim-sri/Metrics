@@ -32,16 +32,16 @@ class FYPPostHeaderTableViewCell: UITableViewCell {
     }
 
 
-    
+
     func updateUI() {
-        //profileImageView.image = post.createdBy.profileImage
-        profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2.0
-        profileImageView.layer.masksToBounds = true
-        
-        usernameButton.setTitle(post.createdBy.username, for: .normal)
-        
-        optionsButton.layer.borderWidth = 1.0
-        optionsButton.layer.cornerRadius = 2.0
-        optionsButton.layer.masksToBounds = true
+//        profileImageView.image = post.createdBy.profileImage
+//        profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2.0
+//        profileImageView.layer.masksToBounds = true
+//
+//        usernameButton.setTitle(post.createdBy.username, for: .normal)
+//
+//        optionsButton.layer.borderWidth = 1.0
+//        optionsButton.layer.cornerRadius = 2.0
+//        optionsButton.layer.masksToBounds = true
     }
 }
