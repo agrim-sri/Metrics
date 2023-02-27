@@ -60,23 +60,39 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func configure(){
         models.append(Section(title: "General", options: [
-            .switchCell(model: SettingsSwitchOption(title: "Airplane Mode", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemRed, handler: {
+            .switchCell(model: SettingsSwitchOption(title: "Dark Mode", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemRed, handler: {
                 
             }, isOn: true)),
-            
+            .staticCell(model: Settingsoption(title: "Location Access", icon: UIImage(systemName: "location"), iconBackgroundColor: .black){
+                
+            }),
+        
+            SettingsOptionType
+            .staticCell(model: Settingsoption(title: "Developer Mode", icon: UIImage(systemName: "flag"), iconBackgroundColor: .systemGreen){
+                
+            }),
+        
+            .staticCell(model: Settingsoption(title: "Tell a Friend", icon: UIImage(systemName: "heart"), iconBackgroundColor: .systemOrange){
+                
+            })
             
         ]))
         
-        models.append(Section(title: "Information", options: [
-            .staticCell(model: Settingsoption(title: "Wifi", icon: UIImage(systemName: "house"), iconBackgroundColor: .systemPink){
+        models.append(Section(title: "About", options: [
+            .staticCell(model: Settingsoption(title: "Rate us on App Store", icon: UIImage(systemName: "people.2"), iconBackgroundColor: .systemPink){
                 print("Tapped first cell")
                 
             }),
-            .staticCell(model: Settingsoption(title: "Bluetooth", icon: UIImage(systemName: "bluetooth"), iconBackgroundColor: .link){
+            .staticCell(model: Settingsoption(title: "Privacy Policy", icon: UIImage(systemName: "lock"), iconBackgroundColor: .link){
                 
             }),
             
-                .staticCell(model: Settingsoption(title: "Airplane Mode", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemGreen){
+                .staticCell(model: Settingsoption(title: "Community Guidlines", icon: UIImage(systemName: "like"), iconBackgroundColor: .systemGreen){
+                    
+                }),
+            
+            SettingsOptionType
+                .staticCell(model: Settingsoption(title: "Delete Metrics Account", icon: UIImage(systemName: "trash"), iconBackgroundColor: .systemGreen){
                     
                 }),
             
@@ -85,25 +101,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 })
             
         ]))
-        
-        models.append(Section(title: "Apps", options: [
-            .staticCell(model: Settingsoption(title: "Wifi", icon: UIImage(systemName: "house"), iconBackgroundColor: .systemPink){
-                print("Tapped first cell")
-                
-            }),
-            .staticCell(model: Settingsoption(title: "Bluetooth", icon: UIImage(systemName: "bluetooth"), iconBackgroundColor: .link){
-                
-            }),
-            
-                .staticCell(model: Settingsoption(title: "Airplane Mode", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemGreen){
-                    
-                }),
-            
-                .staticCell(model: Settingsoption(title: "iCloud", icon: UIImage(systemName: "cloud"), iconBackgroundColor: .systemOrange){
-                    
-                })
-            
-        ]))
+
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
