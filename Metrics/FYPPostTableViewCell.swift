@@ -1,5 +1,5 @@
 //
-//  FYPPostGeneralTableViewCell.swift
+//  FYPPostActionTableViewCell.swift
 //  Metrics
 //
 //  Created by Agrim Srivastava on 25/02/23.
@@ -7,16 +7,18 @@
 
 import UIKit
 
-class FYPPostGeneralTableViewCell: UITableViewCell {
+class FYPPostTableViewCell: UITableViewCell {
 
     @IBOutlet weak var postModelImageView: UIImageView!
+    @IBOutlet weak var postLikeButton: UIButton!
+    @IBOutlet weak var postCaptionButton: UIButton!
+    @IBOutlet weak var postVisitRoomButton: UIButton!
     
     var post: Post! {
         didSet {
             updateUI()
         }
     }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,7 +31,6 @@ class FYPPostGeneralTableViewCell: UITableViewCell {
     }
 
     func updateUI() {
-        //postModelImageView.image = post.image
-    }
     
+    }
 }

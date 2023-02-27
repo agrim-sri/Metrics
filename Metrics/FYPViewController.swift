@@ -15,12 +15,23 @@ class FYPViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     var posts: [Post]?
     
+    struct Storyboard {
+        static let postCell = "FYPPostCell"
+        static let postHeaderCell = "FYPPostHeaderCell"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
+        self.fetchPosts()
+//        self.tableView.dataSource = self
+//        self.tableView.delegate = self
+    }
+    
+    func fetchPosts() {
+        posts = Post.fetchPosts()
+        tableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,14 +50,21 @@ class FYPViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: <#T##String#>, for: indexPath) as! FYPViewController
+        let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.postCell, for: indexPath) as! FYPPostTableViewCell
 
-        cell.posts = posts[indexPath.row]
-        cell.selectionStyle = .none
+        cell.post = posts?[indexPath.section]
+        //cell.selectionStyle = .none
 
         return cell
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.postHeaderCell) as! FYPPostHeaderTableViewCell
+        
+        cell.post = posts?[section]
+        
+        return cell
+    }
 
 
     /*

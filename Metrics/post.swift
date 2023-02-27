@@ -18,7 +18,7 @@ struct Post {
     //var numberOfComments: Int?
     //var numberOfShares: Int?
     
-    static func fetchPost() -> [Post] {
+    static func fetchPosts() -> [Post] {
         var posts = [Post]()
         
         let agrim = User(username: "Agrim", profileImageURL: "macLabPhoto")
