@@ -28,7 +28,7 @@ class User {
 
 struct User {
     var username: String
-    var profileImage: String
+    var profileImageView: String
     var location: String
 }
 
@@ -45,13 +45,16 @@ struct Post {
     static func fetchPosts() -> [Post] {
         //var posts = [Post]()
         
-        let agrim = User(username: "Agrim", profileImage: "macLabPhoto", location: "Gurgaon")
+        let agrim = User(username: "Agrim", profileImageView: "macLabPhoto", location: "Gurgaon")
         let post1 = Post(createdBy: agrim, image: "Macbook")
         
-        let abhi = User(username: "Abhi", profileImage: "macLabPhoto", location: "Gurgaon")
-        let post2 = Post(createdBy: agrim, image: "Macbook")
+        let abhi = User(username: "Abhi", profileImageView: "ytImage", location: "Gurgaon")
+        let post2 = Post(createdBy: abhi, image: "Macbook")
         
-        return [post1,post2]
+        let aneesh = User(username: "Aneesh", profileImageView: "macLabPhoto", location: "Gurgaon")
+        let post3 = Post(createdBy: aneesh, image: "Macbook")
+        
+        return [post1, post2, post3]
         
     }
 }

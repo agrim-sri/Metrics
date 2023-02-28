@@ -53,7 +53,7 @@ class FYPViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.postCell, for: indexPath) as! FYPPostTableViewCell
 
         cell.post = posts?[indexPath.section]
-        //cell.selectionStyle = .none
+        cell.selectionStyle = .none
 
         return cell
     }

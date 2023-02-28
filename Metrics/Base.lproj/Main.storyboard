@@ -229,9 +229,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UrO-qt-Qyb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UrO-qt-Qyb">
                                 <rect key="frame" x="0.0" y="92" width="414" height="721"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FYPPostHeaderCell" rowHeight="60" id="xyw-FQ-seF" customClass="FYPPostHeaderTableViewCell" customModule="Metrics" customModuleProvider="target">
@@ -241,7 +240,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pKl-tP-Ufm">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="macLabPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="pKl-tP-Ufm">
                                                     <rect key="frame" x="20" y="5" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="JBG-wk-zpi"/>
@@ -304,11 +303,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="444"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M6M-bv-q5J">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Macbook" translatesAutoresizingMaskIntoConstraints="NO" id="M6M-bv-q5J">
                                                     <rect key="frame" x="10" y="11" width="394" height="378"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="378" id="ENa-Ve-yn9"/>
-                                                        <constraint firstAttribute="width" constant="374" id="Ojg-5d-SaR"/>
+                                                        <constraint firstAttribute="width" constant="394" id="Ojg-5d-SaR"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="YUi-KB-H3d"/>
                                                     </constraints>
                                                 </imageView>
@@ -354,8 +353,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="i6U-2o-7Qd" firstAttribute="leading" secondItem="xeO-gJ-Sw5" secondAttribute="trailing" constant="8" id="3DZ-um-85X"/>
-                                                <constraint firstItem="M6M-bv-q5J" firstAttribute="leading" secondItem="gq0-P9-QN8" secondAttribute="leading" id="3dF-O4-YBy"/>
-                                                <constraint firstItem="M6M-bv-q5J" firstAttribute="leading" secondItem="UoO-Lx-2Mv" secondAttribute="leadingMargin" id="7fa-XW-iwm"/>
+                                                <constraint firstItem="M6M-bv-q5J" firstAttribute="leading" secondItem="gq0-P9-QN8" secondAttribute="leading" constant="-10" id="3dF-O4-YBy"/>
+                                                <constraint firstItem="M6M-bv-q5J" firstAttribute="leading" secondItem="UoO-Lx-2Mv" secondAttribute="leadingMargin" constant="-10" id="7fa-XW-iwm"/>
                                                 <constraint firstItem="i6U-2o-7Qd" firstAttribute="centerY" secondItem="emp-8d-Ulu" secondAttribute="centerY" id="8KW-Xg-Opz"/>
                                                 <constraint firstItem="xeO-gJ-Sw5" firstAttribute="top" secondItem="i6U-2o-7Qd" secondAttribute="top" id="E27-sK-Jce"/>
                                                 <constraint firstItem="emp-8d-Ulu" firstAttribute="trailing" secondItem="UoO-Lx-2Mv" secondAttribute="trailingMargin" id="Hei-cw-pwq"/>
@@ -381,6 +380,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I0X-WS-rB4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UrO-qt-Qyb" firstAttribute="leading" secondItem="I0X-WS-rB4" secondAttribute="leading" id="3ox-YQ-LwQ"/>
+                            <constraint firstItem="UrO-qt-Qyb" firstAttribute="trailing" secondItem="I0X-WS-rB4" secondAttribute="trailing" id="GXj-0a-egZ"/>
+                            <constraint firstItem="UrO-qt-Qyb" firstAttribute="top" secondItem="I0X-WS-rB4" secondAttribute="top" id="YLg-2K-oIE"/>
+                            <constraint firstItem="UrO-qt-Qyb" firstAttribute="bottom" secondItem="I0X-WS-rB4" secondAttribute="bottom" id="pm9-aM-4Vi"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Metrics" largeTitleDisplayMode="never" id="tzA-8c-XG8"/>
                     <connections>
@@ -780,6 +785,7 @@
         <segue reference="HhT-Uk-PN5"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Macbook" width="768" height="1024"/>
         <image name="Metrics" width="500" height="500"/>
         <image name="apple.logo" catalog="system" width="105" height="128"/>
         <image name="arrow.turn.up.right" catalog="system" width="128" height="99"/>
@@ -790,6 +796,7 @@
         <image name="g.circle" catalog="system" width="128" height="123"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="macLabPhoto" width="1086" height="724"/>
         <image name="mail.stack" catalog="system" width="128" height="122"/>
         <image name="message" catalog="system" width="128" height="116"/>
         <image name="person" catalog="system" width="128" height="121"/>
