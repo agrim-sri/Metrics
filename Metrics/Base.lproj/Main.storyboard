@@ -716,7 +716,7 @@
         <!--Login-->
         <scene sceneID="jls-Xc-s8E">
             <objects>
-                <viewController id="zD4-Es-rPh" customClass="LoginViewController" customModule="Metrics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logInPage" id="zD4-Es-rPh" customClass="LoginViewController" customModule="Metrics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QY2-CO-rJB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -782,7 +782,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bOy-a7-aL8"/>
+        <segue reference="HhT-Uk-PN5"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Metrics" width="500" height="500"/>

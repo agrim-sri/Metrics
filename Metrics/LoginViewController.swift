@@ -30,7 +30,8 @@ class LoginViewController: UIViewController {
             }
             else {
                 //Go to the next page
-                self.performSegue(withIdentifier: "mainPage", sender: self)
+                //self.performSegue(withIdentifier: "goToNext", sender: self)
+                self.storyboard?.instantiateViewController(withIdentifier: "mainPage")//.modalPresentationStyle = .overFullScreen
             }
             
             

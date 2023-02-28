@@ -31,6 +31,7 @@ class CreateAccountViewController: UIViewController {
             else {
                 //Go to the next page
                 self.performSegue(withIdentifier: "goToNext", sender: self)
+                //self.storyboard?.instantiateViewController(withIdentifier: "logInPage")//.modalPresentationStyle = .overFullScreen
             }
             
             
