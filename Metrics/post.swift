@@ -49,12 +49,15 @@ struct Post {
         let post1 = Post(createdBy: agrim, image: "Macbook")
         
         let abhi = User(username: "Abhi", profileImageView: "ytImage", location: "Gurgaon")
-        let post2 = Post(createdBy: abhi, image: "Macbook")
+        let post2 = Post(createdBy: abhi, image: "Image 5")
+        
+        let dev = User(username: "Devjyoti", profileImageView: "dev", location: "Gurgaon")
+        let post3 = Post(createdBy: dev, image: "Image 6")
         
         let aneesh = User(username: "Aneesh", profileImageView: "macLabPhoto", location: "Gurgaon")
-        let post3 = Post(createdBy: aneesh, image: "Macbook")
+        let post4 = Post(createdBy: aneesh, image: "Image 4")
         
-        return [post1, post2, post3]
+        return [post1, post2, post3, post4]
         
     }
 }

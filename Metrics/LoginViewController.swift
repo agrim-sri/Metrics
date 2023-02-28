@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
             }
             else {
                 //Go to the next page
-                self.performSegue(withIdentifier: "goToNext", sender: self)
+                self.performSegue(withIdentifier: "mainPage", sender: self)
             }
             
             

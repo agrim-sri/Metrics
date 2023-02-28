@@ -53,6 +53,7 @@ class FYPViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.postCell, for: indexPath) as! FYPPostTableViewCell
 
         cell.post = posts?[indexPath.section]
+        cell.postModelImageView.image = UIImage(named: cell.post.image)
         cell.selectionStyle = .none
 
         return cell
@@ -62,7 +63,9 @@ class FYPViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.postHeaderCell) as! FYPPostHeaderTableViewCell
         
         cell.post = posts?[section]
-        
+        cell.profileImageView.image = UIImage(named: cell.post.createdBy.profileImageView)
+        cell.usernameButton.titleLabel?.text = cell.post.createdBy.username
+        cell.locationButton.titleLabel?.text = cell.post.createdBy.location
         return cell
     }
 
