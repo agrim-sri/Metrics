@@ -43,12 +43,15 @@ struct Post {
     //var numberOfShares: Int?
     
     static func fetchPosts() -> [Post] {
-        var posts = [Post]()
+        //var posts = [Post]()
         
         let agrim = User(username: "Agrim", profileImage: "macLabPhoto", location: "Gurgaon")
         let post1 = Post(createdBy: agrim, image: "Macbook")
         
-        return posts
+        let abhi = User(username: "Abhi", profileImage: "macLabPhoto", location: "Gurgaon")
+        let post2 = Post(createdBy: agrim, image: "Macbook")
+        
+        return [post1,post2]
         
     }
 }

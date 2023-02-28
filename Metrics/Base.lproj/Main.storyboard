@@ -179,7 +179,7 @@
                                                 <constraint firstAttribute="height" constant="77" id="get-cz-26z"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGH-kf-cyY">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGH-kf-cyY">
                                             <rect key="frame" x="114" y="35" width="170" height="41"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="170" id="RoK-hZ-Ghn"/>
@@ -234,16 +234,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FYPHeaderCell" rowHeight="60" id="xyw-FQ-seF" customClass="FYPPostHeaderTableViewCell" customModule="Metrics" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FYPPostHeaderCell" rowHeight="60" id="xyw-FQ-seF" customClass="FYPPostHeaderTableViewCell" customModule="Metrics" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xyw-FQ-seF" id="Mxm-zF-oOP">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="macLabPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="pKl-tP-Ufm">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pKl-tP-Ufm">
                                                     <rect key="frame" x="20" y="5" width="50" height="50"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="JBG-wk-zpi"/>
+                                                        <constraint firstAttribute="height" constant="50" id="V3k-hc-aQO"/>
                                                         <constraint firstAttribute="width" constant="50" id="Z7l-rY-1HA"/>
                                                     </constraints>
                                                 </imageView>
@@ -302,10 +304,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="444"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Macbook" translatesAutoresizingMaskIntoConstraints="NO" id="M6M-bv-q5J">
-                                                    <rect key="frame" x="20" y="11" width="374" height="378"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M6M-bv-q5J">
+                                                    <rect key="frame" x="10" y="11" width="394" height="378"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="378" id="ENa-Ve-yn9"/>
                                                         <constraint firstAttribute="width" constant="374" id="Ojg-5d-SaR"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="YUi-KB-H3d"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gq0-P9-QN8">
@@ -354,6 +358,7 @@
                                                 <constraint firstItem="M6M-bv-q5J" firstAttribute="leading" secondItem="UoO-Lx-2Mv" secondAttribute="leadingMargin" id="7fa-XW-iwm"/>
                                                 <constraint firstItem="i6U-2o-7Qd" firstAttribute="centerY" secondItem="emp-8d-Ulu" secondAttribute="centerY" id="8KW-Xg-Opz"/>
                                                 <constraint firstItem="xeO-gJ-Sw5" firstAttribute="top" secondItem="i6U-2o-7Qd" secondAttribute="top" id="E27-sK-Jce"/>
+                                                <constraint firstItem="emp-8d-Ulu" firstAttribute="trailing" secondItem="UoO-Lx-2Mv" secondAttribute="trailingMargin" id="Hei-cw-pwq"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="emp-8d-Ulu" secondAttribute="bottom" constant="1" id="NJo-VB-NzG"/>
                                                 <constraint firstItem="gq0-P9-QN8" firstAttribute="top" secondItem="xeO-gJ-Sw5" secondAttribute="top" id="P7a-Bw-AlD"/>
                                                 <constraint firstItem="xeO-gJ-Sw5" firstAttribute="leading" secondItem="gq0-P9-QN8" secondAttribute="trailing" constant="8" id="RHJ-qa-KKB"/>
@@ -361,7 +366,7 @@
                                                 <constraint firstItem="xeO-gJ-Sw5" firstAttribute="bottom" secondItem="i6U-2o-7Qd" secondAttribute="bottom" id="Yk7-3N-Ay0"/>
                                                 <constraint firstItem="gq0-P9-QN8" firstAttribute="bottom" secondItem="xeO-gJ-Sw5" secondAttribute="bottom" id="Yn5-U2-0lr"/>
                                                 <constraint firstItem="gq0-P9-QN8" firstAttribute="top" secondItem="M6M-bv-q5J" secondAttribute="bottom" constant="13" id="tPv-8c-is0"/>
-                                                <constraint firstItem="M6M-bv-q5J" firstAttribute="trailing" secondItem="emp-8d-Ulu" secondAttribute="trailing" id="yZ3-9W-VIE"/>
+                                                <constraint firstItem="M6M-bv-q5J" firstAttribute="trailing" secondItem="emp-8d-Ulu" secondAttribute="trailing" constant="10" id="yZ3-9W-VIE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -775,7 +780,6 @@
         <segue reference="HhT-Uk-PN5"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Macbook" width="768" height="1024"/>
         <image name="Metrics" width="500" height="500"/>
         <image name="apple.logo" catalog="system" width="105" height="128"/>
         <image name="arrow.turn.up.right" catalog="system" width="128" height="99"/>
@@ -786,7 +790,6 @@
         <image name="g.circle" catalog="system" width="128" height="123"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="heart" catalog="system" width="128" height="107"/>
-        <image name="macLabPhoto" width="1086" height="724"/>
         <image name="mail.stack" catalog="system" width="128" height="122"/>
         <image name="message" catalog="system" width="128" height="116"/>
         <image name="person" catalog="system" width="128" height="121"/>
