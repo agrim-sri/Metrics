@@ -109,6 +109,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E1EF49229AF0D48006B5F80 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		9E1EF49329AF0D6C006B5F80 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				9E1EF49229AF0D48006B5F80 /* models */,
+				9E1EF49429AF0D75006B5F80 /* views */,
+				9E1EF49529AF0D81006B5F80 /* modelViews */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		9E1EF49429AF0D75006B5F80 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		9E1EF49529AF0D81006B5F80 /* modelViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = modelViews;
+			sourceTree = "<group>";
+		};
 		9EF2022729857EDA00CA87FD = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +163,7 @@
 		9EF2023229857EDA00CA87FD /* Metrics */ = {
 			isa = PBXGroup;
 			children = (
+				9E1EF49329AF0D6C006B5F80 /* MVVM */,
 				9EF2023329857EDA00CA87FD /* AppDelegate.swift */,
 				9EF2023529857EDA00CA87FD /* CameraViewController.swift */,
 				9E8853AF29AE6C140067D497 /* RoomCaptureViewController.swift */,
