@@ -11,7 +11,7 @@
         <!--ARView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="mainPage" id="BYZ-38-t0r" userLabel="ARView" customClass="CameraViewController" customModule="Metrics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="ARView" customClass="CameraViewController" customModule="Metrics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M6L-Xt-5cQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -25,6 +25,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Room"/>
+                                <connections>
+                                    <segue destination="Ccq-uc-T7C" kind="custom" id="spK-zT-ugc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyD-cw-XSQ">
                                 <rect key="frame" x="311" y="671" width="90" height="35"/>
@@ -85,6 +88,30 @@
             </objects>
             <point key="canvasLocation" x="2868.115942028986" y="133.92857142857142"/>
         </scene>
+        <!--Room Capture View Controller-->
+        <scene sceneID="bYi-Cf-uiF">
+            <objects>
+                <viewController id="Ccq-uc-T7C" customClass="RoomCaptureViewController" customModule="Metrics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rq6-gS-l7x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VQ7-gm-L0L">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VTV-SL-Jki"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="arView" destination="VQ7-gm-L0L" id="eyi-te-BBy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uuF-3q-dNY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3792.753623188406" y="133.92857142857142"/>
+        </scene>
         <!--Camera-->
         <scene sceneID="i5v-VX-PH0">
             <objects>
@@ -107,7 +134,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="X14-nu-lM9">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iU9-Rw-rJJ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iU9-Rw-rJJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c6b-P0-4T8">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -706,7 +733,6 @@
                     <connections>
                         <outlet property="emailTextField" destination="v94-LP-Vom" id="A7X-iR-hG2"/>
                         <outlet property="passwordTextField" destination="nso-hk-jKR" id="Aeg-8F-FwP"/>
-                        <segue destination="gWq-Ho-igo" kind="show" identifier="goToNext" id="HhT-Uk-PN5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ik-sp-7N2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -716,7 +742,7 @@
         <!--Login-->
         <scene sceneID="jls-Xc-s8E">
             <objects>
-                <viewController storyboardIdentifier="logInPage" id="zD4-Es-rPh" customClass="LoginViewController" customModule="Metrics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logInPageController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zD4-Es-rPh" customClass="LoginViewController" customModule="Metrics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QY2-CO-rJB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -757,33 +783,13 @@
                     <connections>
                         <outlet property="emailTextField" destination="3vh-ij-fl4" id="vAi-jk-cTA"/>
                         <outlet property="passwordTextField" destination="mOC-Cb-fCB" id="TBM-yS-CwT"/>
-                        <segue destination="gWq-Ho-igo" kind="show" identifier="goToNext" id="bOy-a7-aL8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZY-Go-38I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5292.753623188406" y="1295.7589285714284"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="cTM-oc-5SW">
-            <objects>
-                <viewController id="gWq-Ho-igo" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kdY-qH-9hv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="sl4-C2-sso"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="du1-R4-xtg"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oBU-Ms-yYJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6252" y="1697"/>
-        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="HhT-Uk-PN5"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Metrics" width="500" height="500"/>
         <image name="apple.logo" catalog="system" width="105" height="128"/>

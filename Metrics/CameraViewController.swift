@@ -13,7 +13,6 @@ import ARKit
 class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendererDelegate {
     
     @IBOutlet var arView: ARView!
-    
     @IBOutlet weak var shareButton: UIButton!
     //ARKit
     let sessionConfiguration = ARWorldTrackingConfiguration()

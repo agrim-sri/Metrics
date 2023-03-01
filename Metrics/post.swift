@@ -51,7 +51,7 @@ struct Post {
         let abhi = User(username: "Abhi", profileImageView: "ytImage", location: "Gurgaon")
         let post2 = Post(createdBy: abhi, image: "Image 5")
         
-        let dev = User(username: "Devjyoti", profileImageView: "dev", location: "Gurgaon")
+        let dev = User(username: "Devjyoti", profileImageView: "dev", location: "Bhubaneswar")
         let post3 = Post(createdBy: dev, image: "Image 6")
         
         let aneesh = User(username: "Aneesh", profileImageView: "macLabPhoto", location: "Gurgaon")
