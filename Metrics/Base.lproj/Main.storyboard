@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iU9-Rw-rJJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Mp-NQ-FV1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -150,11 +150,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f82-qi-8BN">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f82-qi-8BN">
                                 <rect key="frame" x="0.0" y="48" width="414" height="591"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="G0G-Qv-HSQ">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="G0G-Qv-HSQ">
                                     <size key="itemSize" width="414" height="567"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -162,26 +162,26 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCollectionViewCell" id="mzt-sT-D5G" customClass="OnboardingCollectionViewCell" customModule="Metrics" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="567"/>
+                                        <rect key="frame" x="0.0" y="12" width="414" height="567"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zrw-se-DFG">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="567"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gLM-qu-J6J">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="496"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="480"/>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OFl-hi-gTM">
-                                                    <rect key="frame" x="-13" y="496" width="382" height="55"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OFl-hi-gTM">
+                                                    <rect key="frame" x="0.0" y="480" width="414" height="71"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measure your Furniture" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp8-Zv-hHI">
-                                                            <rect key="frame" x="38" y="0.0" width="306.5" height="37"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="31"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With Enabled AR Functionality" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiS-qN-tYF">
-                                                            <rect key="frame" x="88" y="37" width="206" height="18"/>
+                                                            <rect key="frame" x="0.0" y="53" width="414" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -191,11 +191,19 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="gLM-qu-J6J" firstAttribute="top" secondItem="Zrw-se-DFG" secondAttribute="top" id="2Eh-QI-HjK"/>
+                                                <constraint firstItem="OFl-hi-gTM" firstAttribute="leading" secondItem="Zrw-se-DFG" secondAttribute="leading" id="7Ts-W4-gPw"/>
+                                                <constraint firstAttribute="bottom" secondItem="OFl-hi-gTM" secondAttribute="bottom" constant="16" id="LmF-XH-cUN"/>
                                                 <constraint firstAttribute="bottom" secondItem="OFl-hi-gTM" secondAttribute="bottom" constant="16" id="Q1j-lY-x43"/>
+                                                <constraint firstAttribute="trailing" secondItem="OFl-hi-gTM" secondAttribute="trailing" id="T1L-z3-CiK"/>
                                                 <constraint firstAttribute="trailing" secondItem="OFl-hi-gTM" secondAttribute="trailing" constant="16" id="VtC-gf-wup"/>
+                                                <constraint firstAttribute="bottom" secondItem="OFl-hi-gTM" secondAttribute="bottom" id="eKj-rB-6J4"/>
                                                 <constraint firstItem="OFl-hi-gTM" firstAttribute="top" secondItem="gLM-qu-J6J" secondAttribute="bottom" id="hdh-Ic-3st"/>
                                                 <constraint firstItem="OFl-hi-gTM" firstAttribute="leading" secondItem="Zrw-se-DFG" secondAttribute="leading" constant="16" id="ik1-ra-AlW"/>
+                                                <constraint firstItem="OFl-hi-gTM" firstAttribute="leading" secondItem="Zrw-se-DFG" secondAttribute="leading" id="kNK-TF-oZ0"/>
+                                                <constraint firstAttribute="trailing" secondItem="OFl-hi-gTM" secondAttribute="trailing" id="pSg-NM-7Xv"/>
+                                                <constraint firstItem="OFl-hi-gTM" firstAttribute="top" secondItem="gLM-qu-J6J" secondAttribute="bottom" constant="16" id="qSM-V9-DEU"/>
                                                 <constraint firstAttribute="trailing" secondItem="gLM-qu-J6J" secondAttribute="trailing" id="xyK-Q8-Adc"/>
+                                                <constraint firstItem="OFl-hi-gTM" firstAttribute="top" secondItem="gLM-qu-J6J" secondAttribute="bottom" id="zX5-OS-IXx"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="567"/>
@@ -227,7 +235,7 @@
                                     <action selector="nextBtnClicked:" destination="4Mp-NQ-FV1" eventType="touchUpInside" id="ZWh-mt-weo"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="JiU-0H-WEM">
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="JiU-0H-WEM">
                                 <rect key="frame" x="149" y="730" width="116.5" height="26"/>
                                 <color key="pageIndicatorTintColor" systemColor="systemGray5Color"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="labelColor"/>
