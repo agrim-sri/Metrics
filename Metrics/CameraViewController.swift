@@ -19,8 +19,8 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendere
 //    guard let referenceObjects = ARReferenceObject.referenceObjects(inGroupNamed: "gallery", bundle: nil) else {
 //        fatalError("Message expected asset catalog resource.")
 //    }
-//    confirguration.detectionObjects = referenceObjects
-//    sceneView.session.run(configuration)
+//    sessionConfiguration.detectionObjects = referenceObjects
+//    sceneView.session.run(sessionConfiguration)
 
     
     

@@ -26,7 +26,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Room"/>
                                 <connections>
-                                    <segue destination="Ccq-uc-T7C" kind="custom" id="spK-zT-ugc"/>
+                                    <segue destination="Ccq-uc-T7C" kind="show" id="i8x-57-Pc7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyD-cw-XSQ">
@@ -96,16 +96,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VQ7-gm-L0L">
-                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVq-et-McE">
+                                <rect key="frame" x="171" y="733" width="74" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </arView>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Export"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VTV-SL-Jki"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="5fh-N3-X1Y">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="6jb-Zr-o37"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="qPh-Wu-HwV"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="arView" destination="VQ7-gm-L0L" id="eyi-te-BBy"/>
+                        <outlet property="cancelButton" destination="6jb-Zr-o37" id="qQ5-uD-KIC"/>
+                        <outlet property="doneButton" destination="qPh-Wu-HwV" id="FWe-xF-iuQ"/>
+                        <outlet property="exportButton" destination="vVq-et-McE" id="xZJ-jm-g0H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuF-3q-dNY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
