@@ -138,8 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				6B6E444129AF1628005F8DE5 /* OnboardingSlide.swift */,
-				9EFCCC9429A4D8C70076D57E /* WorkDataModel.swift */,
-				9E8853A929AD2CC60067D497 /* post.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -204,9 +202,11 @@
 				6B6287D429AB420E002556F7 /* SettingTableViewCell.swift */,
 				6B6287D629AB62CD002556F7 /* SwitchTableViewCell.swift */,
 				9EF2023729857EDA00CA87FD /* Experience.rcproject */,
+				9E8853A929AD2CC60067D497 /* post.swift */,
 				9EF2023929857EDA00CA87FD /* Main.storyboard */,
 				9EF2023C29857EDB00CA87FD /* Assets.xcassets */,
 				9EF2023E29857EDB00CA87FD /* LaunchScreen.storyboard */,
+				9EFCCC9429A4D8C70076D57E /* WorkDataModel.swift */,
 				9E76636E29A397270066E67A /* WorkTableViewCell.swift */,
 				9E8853AB29AD2CE40067D497 /* FYPPostHeaderTableViewCell.swift */,
 				9E8853AD29AD2CF00067D497 /* FYPPostTableViewCell.swift */,
