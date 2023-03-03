@@ -642,7 +642,6 @@
         <!--Savedicons View Controller-->
         <scene sceneID="SdD-VW-lnW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BXA-cc-9rw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="kgW-lu-sPl" customClass="SavediconsViewController" customModule="Metrics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xb5-jb-11E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -691,7 +690,11 @@
                         <viewLayoutGuide key="safeArea" id="frY-pe-3d9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ZEC-s3-Hy2" id="S0s-Kl-zLW"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXA-cc-9rw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3653.6231884057975" y="2640.4017857142858"/>
         </scene>
