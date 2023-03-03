@@ -40,23 +40,23 @@ class OnboardingViewController: UIViewController {
     }
     
 
-    @IBAction func nextBtnClicked(_ sender: UIButton) {
-        if currentPage == slides.count - 1 {
-            let controller = storyboard?.instantiateViewController(withIdentifier: "tabBarController") {
-                controller?.modalPresentationStyle = .overFullScreen
-                present(controller, animated: true)
-            }
-            
-            
-            
-        } else {
-            currentPage += 1
-            let indexPath = IndexPath(item: currentPage, section: 0)
-            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        }
-        
-        
-    }
+//    @IBAction func nextBtnClicked(_ sender: UIButton) {
+//        if currentPage == slides.count - 1 {
+//            let controller = storyboard?.instantiateViewController(withIdentifier: "tabBarController") {
+//                controller?.modalPresentationStyle = .overFullScreen
+//                present(controller, animated: true)
+//            }
+//
+//
+//
+//        } else {
+//            currentPage += 1
+//            let indexPath = IndexPath(item: currentPage, section: 0)
+//            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+//        }
+//
+//
+//    }
     
 
 }
