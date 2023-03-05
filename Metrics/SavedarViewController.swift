@@ -14,6 +14,8 @@ class SavedarViewController: UIViewController {
         super.viewDidLoad()
 
         collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
 
 }
@@ -30,6 +32,20 @@ extension SavedarViewController:
             return cell
         }
     }
+
+extension SavedarViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 190, height: 210)
+    }
+}
+
+extension SavedarViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        print(data[indexPath.row].title)
+    }
+}
+
+
 
 
 
