@@ -74,7 +74,7 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="58q-St-9CG">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="58q-St-9CG">
                             <rect key="frame" x="98" y="5.5" width="218" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
@@ -661,6 +661,7 @@
                                 <connections>
                                     <outlet property="dataLabel" destination="PiA-F7-U2j" id="LQA-Bb-S1W"/>
                                     <outlet property="titleLabel" destination="g5K-BA-RWi" id="rlg-Aj-3bT"/>
+                                    <segue destination="vqI-ry-KHN" kind="presentation" id="vEY-G6-Nao"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -692,7 +693,7 @@
             <objects>
                 <viewController id="vqI-ry-KHN" customClass="SavedarViewController" customModule="Metrics" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qrw-R7-4qa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WMu-aL-1IP">
@@ -1028,6 +1029,7 @@
                     <view key="view" contentMode="scaleToFill" id="xyL-ua-jE2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="721"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="O8B-th-tTC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
