@@ -17,25 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rYP-Yc-R9o">
-                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYP-Yc-R9o">
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                             </arView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nA3-r5-6WC">
-                                <rect key="frame" x="311" y="714" width="90" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Room"/>
-                                <connections>
-                                    <segue destination="Ccq-uc-T7C" kind="show" id="i8x-57-Pc7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyD-cw-XSQ">
-                                <rect key="frame" x="311" y="671" width="90" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Measure"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIU-wT-Npu">
                                 <rect key="frame" x="315" y="415" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -45,14 +29,41 @@
                                     <backgroundConfiguration key="background" image="circle.inset.filled" catalog="system"/>
                                 </buttonConfiguration>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiT-Cz-EPb" userLabel="Measure Container View">
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <connections>
+                                    <segue destination="A7Z-5F-add" kind="embed" identifier="toMeasure" id="swn-wu-2e0"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MV8-wv-Rbq" userLabel="Room Capture Container View">
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <connections>
+                                    <segue destination="Ccq-uc-T7C" kind="embed" identifier="toRoomCapture" id="E3p-Ed-Kmw"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h6z-Iy-sJ4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rYP-Yc-R9o" secondAttribute="trailing" id="8e7-6n-1yJ"/>
+                            <constraint firstItem="rYP-Yc-R9o" firstAttribute="top" secondItem="yiT-Cz-EPb" secondAttribute="top" id="CCM-jN-Ydy"/>
+                            <constraint firstItem="rYP-Yc-R9o" firstAttribute="leading" secondItem="yiT-Cz-EPb" secondAttribute="leading" id="ShY-1q-Ny4"/>
+                            <constraint firstItem="rYP-Yc-R9o" firstAttribute="leading" secondItem="M6L-Xt-5cQ" secondAttribute="leading" id="UUE-cF-7BS"/>
+                            <constraint firstItem="rYP-Yc-R9o" firstAttribute="bottom" secondItem="h6z-Iy-sJ4" secondAttribute="bottom" id="WfJ-ji-j7C"/>
+                            <constraint firstItem="rYP-Yc-R9o" firstAttribute="trailing" secondItem="yiT-Cz-EPb" secondAttribute="trailing" id="cLA-NA-eoR"/>
+                            <constraint firstItem="rYP-Yc-R9o" firstAttribute="bottom" secondItem="yiT-Cz-EPb" secondAttribute="bottom" id="gwr-iG-C8O"/>
+                            <constraint firstItem="rYP-Yc-R9o" firstAttribute="bottom" secondItem="MV8-wv-Rbq" secondAttribute="bottom" id="hys-wZ-Ibb"/>
+                            <constraint firstItem="rYP-Yc-R9o" firstAttribute="leading" secondItem="MV8-wv-Rbq" secondAttribute="leading" id="kVC-SJ-Txu"/>
+                            <constraint firstItem="rYP-Yc-R9o" firstAttribute="top" secondItem="h6z-Iy-sJ4" secondAttribute="top" id="o2Z-gb-dp3"/>
+                            <constraint firstItem="rYP-Yc-R9o" firstAttribute="trailing" secondItem="MV8-wv-Rbq" secondAttribute="trailing" id="yMk-BP-Pf0"/>
+                            <constraint firstItem="rYP-Yc-R9o" firstAttribute="top" secondItem="MV8-wv-Rbq" secondAttribute="top" id="ymz-BW-39d"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7cH-by-Z89">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" style="plain" id="zP6-UJ-58v">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="LyP-EX-yFU">
-                                <rect key="frame" x="20" y="2" width="40" height="40"/>
+                                <rect key="frame" x="20" y="8.5" width="27" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -63,9 +74,21 @@
                                 </connections>
                             </button>
                         </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="58q-St-9CG">
+                            <rect key="frame" x="98" y="5.5" width="218" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Lidar"/>
+                                <segment title="Measure"/>
+                                <segment title="Room"/>
+                            </segments>
+                            <connections>
+                                <action selector="didTapSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="nGc-tG-5EY"/>
+                            </connections>
+                        </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="FxG-kz-8MK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="MFj-mm-BIg">
-                                <rect key="frame" x="354" y="2" width="40" height="40"/>
+                                <rect key="frame" x="367" y="8.5" width="27" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -76,6 +99,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="arView" destination="rYP-Yc-R9o" id="ctY-Nz-mZe"/>
+                        <outlet property="containerMeasureView" destination="yiT-Cz-EPb" id="EJl-CY-zRg"/>
+                        <outlet property="containerRoomCaptureView" destination="MV8-wv-Rbq" id="Fyv-ma-za6"/>
                         <outlet property="shareButton" destination="LyP-EX-yFU" id="bgt-IO-95x"/>
                     </connections>
                 </viewController>
@@ -88,34 +113,48 @@
             <objects>
                 <viewController id="Ccq-uc-T7C" customClass="RoomCaptureViewController" customModule="Metrics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rq6-gS-l7x">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="721"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVq-et-McE">
-                                <rect key="frame" x="171" y="733" width="74" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bG4-7y-ICE">
+                                <rect key="frame" x="172" y="637" width="74" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Export"/>
+                                <connections>
+                                    <action selector="exportResults:" destination="Ccq-uc-T7C" eventType="touchUpInside" id="jdQ-2a-NKt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VTV-SL-Jki"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem title="Cancel" id="Vsw-ZU-1QC">
+                            <connections>
+                                <action selector="cancelScanning:" destination="Ccq-uc-T7C" id="Vjz-AH-k3L"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Done" id="b0C-wP-HFR">
+                            <connections>
+                                <action selector="doneScanning:" destination="Ccq-uc-T7C" id="16O-Qd-Ise"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="5fh-N3-X1Y">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="6jb-Zr-o37"/>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="qPh-Wu-HwV"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="cancelButton" destination="6jb-Zr-o37" id="qQ5-uD-KIC"/>
-                        <outlet property="doneButton" destination="qPh-Wu-HwV" id="FWe-xF-iuQ"/>
-                        <outlet property="exportButton" destination="vVq-et-McE" id="xZJ-jm-g0H"/>
+                        <outlet property="cancelButton" destination="Vsw-ZU-1QC" id="e7B-zt-fQp"/>
+                        <outlet property="doneButton" destination="b0C-wP-HFR" id="SxW-Cu-nDg"/>
+                        <outlet property="exportButton" destination="bG4-7y-ICE" id="ZH4-dl-5OE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuF-3q-dNY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3792.753623188406" y="133.92857142857142"/>
+            <point key="canvasLocation" x="3736" y="555"/>
         </scene>
         <!--Camera-->
         <scene sceneID="i5v-VX-PH0">
@@ -981,6 +1020,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZY-Go-38I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5292.753623188406" y="1295.7589285714284"/>
+        </scene>
+        <!--Measure View Controller-->
+        <scene sceneID="YAe-3x-mIN">
+            <objects>
+                <viewController id="A7Z-5F-add" customClass="MeasureViewController" customModule="Metrics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xyL-ua-jE2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="721"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="adX-6J-ywE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3733" y="-60"/>
         </scene>
     </scenes>
     <resources>

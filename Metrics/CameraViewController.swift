@@ -12,6 +12,9 @@ import ARKit
 
 class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendererDelegate {
     
+    
+    @IBOutlet weak var containerRoomCaptureView: UIView!
+    @IBOutlet weak var containerMeasureView: UIView!
     @IBOutlet var arView: ARView!
     @IBOutlet weak var shareButton: UIButton!
     //ARKit
@@ -32,8 +35,31 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendere
 //
         // Add the box anchor to the scene
 //        arView.scene.anchors.append(boxAnchor)
+        setUp()
         }
     
+    func setUp() {
+        containerMeasureView.isHidden = true
+        containerRoomCaptureView.isHidden = true
+    }
+    
+    @IBAction func didTapSegment(_ sender: UISegmentedControl) {
+        containerMeasureView.isHidden = true
+        containerRoomCaptureView.isHidden = true
+        
+        if sender.selectedSegmentIndex == 0 {
+            containerMeasureView.isHidden = true
+            containerRoomCaptureView.isHidden = true
+        }
+        else if sender.selectedSegmentIndex == 1 {
+            containerMeasureView.isHidden = false
+            containerRoomCaptureView.isHidden = true
+        }
+        else {
+            containerMeasureView.isHidden = true
+            containerRoomCaptureView.isHidden = false
+        }
+    }
     @IBAction func shareButtonTapped(_ sender: UIButton) {
         let shareText = "Check out this cool thing I found!"
             let shareURL = URL(string: "https://www.example.com/cool-thing")!

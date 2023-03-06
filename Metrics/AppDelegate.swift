@@ -16,23 +16,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        print(NSHomeDirectory())
-//        let value = UserDefaults.standard.integer(forKey: "firstTime")
-//        if value == 0 {
-//            print("Running first time")
-//            UserDefaults.standard.setValue(1, forKey:   "firstTime")
-//            
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let vc = storyboard.instantiateViewController(withIdentifier: "OnBoardingViewController")
-//            window?.rootViewController = vc
-//        } else {
-//            print("Running after first time")
-//            
-//            let sb = UIStoryboard(name: "Main", bundle: nil)
-//            let viewController = sb.instantiateViewController(withIdentifier: "tabBarController")
-//            window?.rootViewController = viewController
-//            
-//        }
+        print(NSHomeDirectory())
+        let value = UserDefaults.standard.integer(forKey: "firstTime")
+        if value == 0 {
+            print("Running first time")
+            UserDefaults.standard.setValue(1, forKey:   "firstTime")
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "OnBoardingViewController")
+            window?.rootViewController = vc
+        } else {
+            print("Running after first time")
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = sb.instantiateViewController(withIdentifier: "tabBarController")
+            window?.rootViewController = viewController
+            
+        }
         FirebaseApp.configure()
         return true
     }
