@@ -22,7 +22,11 @@ let data : [Designs] = [
     Designs(title: "Bed Room", description: "DLF Phase 2 3BHK", imageName: "Image 7"),
 ]
 
-struct Furniture {
-    let title: String
-    
-}
+//struct Furniture {
+//    let title: String
+//    let geometry: SCNGeometry
+//    let materials: [SCNMaterial]
+//    var transform: SCNMatrix4
+//}
+
+

@@ -7,6 +7,8 @@
 
 import UIKit
 import RoomPlan
+import SceneKit
+import ARKit
 
 
 class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, RoomCaptureSessionDelegate {
@@ -15,6 +17,8 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
     
     @IBOutlet var doneButton: UIBarButtonItem?
     @IBOutlet var cancelButton: UIBarButtonItem?
+
+   // @IBOutlet weak var sceneView: ARSCNView!
     
     private var isScanning: Bool = false
     
@@ -22,6 +26,17 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
     private var roomCaptureSessionConfig: RoomCaptureSession.Configuration = RoomCaptureSession.Configuration()
     
     private var finalResults: CapturedRoom?
+    
+    
+//    let material = SCNMaterial()
+//
+//    let plane = SCNPlane(width: 1.0, height: 1.0)
+    
+    
+    
+    
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +61,20 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
         super.viewWillDisappear(flag)
         stopSession()
     }
+//    override func viewWillAppear(_ animated: Bool) {
+//        let screenshot = sceneView.snapshot()
+//        let roomPlanNode = SCNNode(geometry: plane)
+//        let floorNode = roomPlanNode.childNode(withName: "floor", recursively: true)
+//        material.diffuse.contents = screenshot
+//        floorNode?.geometry?.materials = [material]
+////        for wallNode in roomPlanNode.childNodes {
+////            if wallNode.geometry?.primitiveType == .box {
+////                wallNode.geometry?.materials = [material]
+////            }
+////        }
+//        sceneView.scene.rootNode.addChildNode(roomPlanNode)
+//
+//    }
     
     private func startSession() {
         isScanning = true
