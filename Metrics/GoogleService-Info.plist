@@ -19,16 +19,20 @@
 	<key>STORAGE_BUCKET</key>
 	<string>metrics-16ad1.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:602433466976:ios:40ee5b5d3fa53008fc4905</string>
+	<key>NSCameraUsageDescription</key>
+	<string>LET US USE YOUR PHOTO</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>LET US USE YOUR LIBRARY</string>
 </dict>
 </plist>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B429E6B29B4747900525570 /* SavedarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B429E6A29B4747900525570 /* SavedarCollectionViewCell.swift */; };
 		6B429E6F29B477A300525570 /* SavedarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B429E6E29B477A300525570 /* SavedarViewController.swift */; };
+		6B429EAF29CA362600525570 /* CameraphotolibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B429EAE29CA362600525570 /* CameraphotolibraryViewController.swift */; };
 		6B6287D329AB3930002556F7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6287D229AB3930002556F7 /* SettingsViewController.swift */; };
 		6B6287D529AB420E002556F7 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6287D429AB420E002556F7 /* SettingTableViewCell.swift */; };
 		6B6287D729AB62CD002556F7 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6287D629AB62CD002556F7 /* SwitchTableViewCell.swift */; };
@@ -63,6 +64,7 @@
 /* Begin PBXFileReference section */
 		6B429E6A29B4747900525570 /* SavedarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedarCollectionViewCell.swift; sourceTree = "<group>"; };
 		6B429E6E29B477A300525570 /* SavedarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedarViewController.swift; sourceTree = "<group>"; };
+		6B429EAE29CA362600525570 /* CameraphotolibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraphotolibraryViewController.swift; sourceTree = "<group>"; };
 		6B6287D229AB3930002556F7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6B6287D429AB420E002556F7 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		6B6287D629AB62CD002556F7 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				9EF2023929857EDA00CA87FD /* Main.storyboard */,
+				6B429EAE29CA362600525570 /* CameraphotolibraryViewController.swift */,
 				9EF2023E29857EDB00CA87FD /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -487,6 +490,7 @@
 				9E1BE9E329AB1E2F0057C4DC /* ProfileTableViewCell.swift in Sources */,
 				9EFCCC9529A4D8C70076D57E /* WorkDataModel.swift in Sources */,
 				9EF2023629857EDA00CA87FD /* CameraViewController.swift in Sources */,
+				6B429EAF29CA362600525570 /* CameraphotolibraryViewController.swift in Sources */,
 				9EF2023429857EDA00CA87FD /* AppDelegate.swift in Sources */,
 				9E8853AE29AD2CF00067D497 /* FYPPostTableViewCell.swift in Sources */,
 				9E1BE9E129AB1E170057C4DC /* ProfileTableViewController.swift in Sources */,
