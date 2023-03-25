@@ -8,6 +8,7 @@
 import UIKit
 import RealityKit
 import ARKit
+import SwiftUI
 
 
 class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendererDelegate {
@@ -67,5 +68,9 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendere
             let activityViewController = UIActivityViewController(activityItems: [shareText, shareURL], applicationActivities: nil)
 
             present(activityViewController, animated: true, completion: nil)
+    }
+    
+    @IBSegueAction func showSwiftUi(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: ContentView(model: CameraViewModel()))
     }
 }

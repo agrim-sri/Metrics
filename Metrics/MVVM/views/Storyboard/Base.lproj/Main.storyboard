@@ -32,7 +32,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiT-Cz-EPb" userLabel="Measure Container View">
                                 <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <connections>
-                                    <segue destination="A7Z-5F-add" kind="embed" identifier="toMeasure" id="swn-wu-2e0"/>
+                                    <segue destination="KUq-fh-tsj" kind="embed" destinationCreationSelector="showSwiftUi:" id="BFZ-um-Adz"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MV8-wv-Rbq" userLabel="Room Capture Container View">
@@ -107,6 +107,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2868.115942028986" y="133.92857142857142"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="ntm-BL-7O9">
+            <objects>
+                <hostingController id="KUq-fh-tsj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ree-9C-Re7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3810" y="-68"/>
         </scene>
         <!--Room Capture View Controller-->
         <scene sceneID="bYi-Cf-uiF">
@@ -1021,21 +1029,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZY-Go-38I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5292.753623188406" y="1295.7589285714284"/>
-        </scene>
-        <!--Photo View Controller-->
-        <scene sceneID="YAe-3x-mIN">
-            <objects>
-                <viewController id="A7Z-5F-add" customClass="PhotoViewController" customModule="Metrics" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xyL-ua-jE2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="721"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="O8B-th-tTC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="adX-6J-ywE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3731.884057971015" y="-60.602678571428569"/>
         </scene>
     </scenes>
     <resources>
