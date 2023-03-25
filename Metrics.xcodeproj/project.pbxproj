@@ -30,25 +30,22 @@
 		9E8853AC29AD2CE40067D497 /* FYPPostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8853AB29AD2CE40067D497 /* FYPPostHeaderTableViewCell.swift */; };
 		9E8853AE29AD2CF00067D497 /* FYPPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8853AD29AD2CF00067D497 /* FYPPostTableViewCell.swift */; };
 		9E8853B029AE6C140067D497 /* RoomCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8853AF29AE6C140067D497 /* RoomCaptureViewController.swift */; };
-		9E93885129CEAF1500F0F688 /* CaptureSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93883E29CEAF1500F0F688 /* CaptureSampleApp.swift */; };
-		9E93885229CEAF1500F0F688 /* AsyncImageHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93883F29CEAF1500F0F688 /* AsyncImageHelpers.swift */; };
-		9E93885329CEAF1500F0F688 /* CaptureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93884029CEAF1500F0F688 /* CaptureInfo.swift */; };
-		9E93885429CEAF1500F0F688 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93884129CEAF1500F0F688 /* ContentView.swift */; };
-		9E93885529CEAF1500F0F688 /* InfoPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93884229CEAF1500F0F688 /* InfoPanelView.swift */; };
-		9E93885629CEAF1500F0F688 /* TriggerEveryTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93884329CEAF1500F0F688 /* TriggerEveryTimer.swift */; };
-		9E93885729CEAF1500F0F688 /* HelpPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93884429CEAF1500F0F688 /* HelpPageView.swift */; };
-		9E93885829CEAF1500F0F688 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93884529CEAF1500F0F688 /* PhotoCaptureDelegate.swift */; };
-		9E93885929CEAF1500F0F688 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93884629CEAF1500F0F688 /* TimerView.swift */; };
-		9E93885A29CEAF1500F0F688 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93884729CEAF1500F0F688 /* ImageLoader.swift */; };
-		9E93885B29CEAF1500F0F688 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93884829CEAF1500F0F688 /* CameraViewModel.swift */; };
-		9E93885C29CEAF1500F0F688 /* CaptureFolderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93884929CEAF1500F0F688 /* CaptureFolderState.swift */; };
-		9E93885D29CEAF1500F0F688 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93884A29CEAF1500F0F688 /* CameraPreviewView.swift */; };
-		9E93885E29CEAF1500F0F688 /* CaptureFoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93884B29CEAF1500F0F688 /* CaptureFoldersView.swift */; };
-		9E93885F29CEAF1500F0F688 /* CaptureGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93884C29CEAF1500F0F688 /* CaptureGalleryView.swift */; };
-		9E93886029CEAF1500F0F688 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93884D29CEAF1500F0F688 /* CameraView.swift */; };
-		9E93886129CEAF1500F0F688 /* CaptureSample in Resources */ = {isa = PBXBuildFile; fileRef = 9E93884E29CEAF1500F0F688 /* CaptureSample */; };
-		9E93886229CEAF1500F0F688 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 9E93884F29CEAF1500F0F688 /* Preview Content */; };
-		9E93886329CEAF1500F0F688 /* Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93885029CEAF1500F0F688 /* Capture.swift */; };
+		9E93890429CEEA2D00F0F688 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9388F229CEEA2C00F0F688 /* CameraView.swift */; };
+		9E93890529CEEA2D00F0F688 /* CaptureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9388F329CEEA2C00F0F688 /* CaptureInfo.swift */; };
+		9E93890629CEEA2D00F0F688 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9388F429CEEA2C00F0F688 /* CameraViewModel.swift */; };
+		9E93890729CEEA2D00F0F688 /* InfoPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9388F529CEEA2C00F0F688 /* InfoPanelView.swift */; };
+		9E93890829CEEA2D00F0F688 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9388F629CEEA2C00F0F688 /* ImageLoader.swift */; };
+		9E93890929CEEA2D00F0F688 /* CaptureGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9388F729CEEA2C00F0F688 /* CaptureGalleryView.swift */; };
+		9E93890B29CEEA2D00F0F688 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9388F929CEEA2C00F0F688 /* CameraPreviewView.swift */; };
+		9E93890C29CEEA2D00F0F688 /* CaptureFolderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9388FA29CEEA2C00F0F688 /* CaptureFolderState.swift */; };
+		9E93890D29CEEA2D00F0F688 /* HelpPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9388FB29CEEA2C00F0F688 /* HelpPageView.swift */; };
+		9E93890E29CEEA2D00F0F688 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9388FC29CEEA2C00F0F688 /* ContentView.swift */; };
+		9E93890F29CEEA2D00F0F688 /* CaptureFoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9388FD29CEEA2C00F0F688 /* CaptureFoldersView.swift */; };
+		9E93891029CEEA2D00F0F688 /* Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9388FE29CEEA2D00F0F688 /* Capture.swift */; };
+		9E93891129CEEA2D00F0F688 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9388FF29CEEA2D00F0F688 /* PhotoCaptureDelegate.swift */; };
+		9E93891229CEEA2D00F0F688 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93890029CEEA2D00F0F688 /* TimerView.swift */; };
+		9E93891329CEEA2D00F0F688 /* TriggerEveryTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93890129CEEA2D00F0F688 /* TriggerEveryTimer.swift */; };
+		9E93891429CEEA2D00F0F688 /* AsyncImageHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E93890229CEEA2D00F0F688 /* AsyncImageHelpers.swift */; };
 		9ED57E0729BEEC43006FDA43 /* ARDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED57E0629BEEC43006FDA43 /* ARDataModel.swift */; };
 		9EF2023429857EDA00CA87FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF2023329857EDA00CA87FD /* AppDelegate.swift */; };
 		9EF2023629857EDA00CA87FD /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF2023529857EDA00CA87FD /* CameraViewController.swift */; };
@@ -102,25 +99,22 @@
 		9E8853AB29AD2CE40067D497 /* FYPPostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYPPostHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		9E8853AD29AD2CF00067D497 /* FYPPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYPPostTableViewCell.swift; sourceTree = "<group>"; };
 		9E8853AF29AE6C140067D497 /* RoomCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCaptureViewController.swift; sourceTree = "<group>"; };
-		9E93883E29CEAF1500F0F688 /* CaptureSampleApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaptureSampleApp.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/CaptureSampleApp.swift; sourceTree = "<group>"; };
-		9E93883F29CEAF1500F0F688 /* AsyncImageHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AsyncImageHelpers.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/AsyncImageHelpers.swift; sourceTree = "<group>"; };
-		9E93884029CEAF1500F0F688 /* CaptureInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaptureInfo.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/CaptureInfo.swift; sourceTree = "<group>"; };
-		9E93884129CEAF1500F0F688 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/ContentView.swift; sourceTree = "<group>"; };
-		9E93884229CEAF1500F0F688 /* InfoPanelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoPanelView.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/InfoPanelView.swift; sourceTree = "<group>"; };
-		9E93884329CEAF1500F0F688 /* TriggerEveryTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TriggerEveryTimer.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/TriggerEveryTimer.swift; sourceTree = "<group>"; };
-		9E93884429CEAF1500F0F688 /* HelpPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpPageView.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/HelpPageView.swift; sourceTree = "<group>"; };
-		9E93884529CEAF1500F0F688 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCaptureDelegate.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
-		9E93884629CEAF1500F0F688 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerView.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/TimerView.swift; sourceTree = "<group>"; };
-		9E93884729CEAF1500F0F688 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/ImageLoader.swift; sourceTree = "<group>"; };
-		9E93884829CEAF1500F0F688 /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewModel.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/CameraViewModel.swift; sourceTree = "<group>"; };
-		9E93884929CEAF1500F0F688 /* CaptureFolderState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaptureFolderState.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/CaptureFolderState.swift; sourceTree = "<group>"; };
-		9E93884A29CEAF1500F0F688 /* CameraPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraPreviewView.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/CameraPreviewView.swift; sourceTree = "<group>"; };
-		9E93884B29CEAF1500F0F688 /* CaptureFoldersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaptureFoldersView.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/CaptureFoldersView.swift; sourceTree = "<group>"; };
-		9E93884C29CEAF1500F0F688 /* CaptureGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaptureGalleryView.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/CaptureGalleryView.swift; sourceTree = "<group>"; };
-		9E93884D29CEAF1500F0F688 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/CameraView.swift; sourceTree = "<group>"; };
-		9E93884E29CEAF1500F0F688 /* CaptureSample */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CaptureSample; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample; sourceTree = "<group>"; };
-		9E93884F29CEAF1500F0F688 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Preview Content"; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/Preview Content"; sourceTree = "<group>"; };
-		9E93885029CEAF1500F0F688 /* Capture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Capture.swift; path = ../../../../Downloads/TakingPicturesFor3DObjectCapture/CaptureSample/Capture.swift; sourceTree = "<group>"; };
+		9E9388F229CEEA2C00F0F688 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraView.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/CameraView.swift"; sourceTree = "<group>"; };
+		9E9388F329CEEA2C00F0F688 /* CaptureInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaptureInfo.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/CaptureInfo.swift"; sourceTree = "<group>"; };
+		9E9388F429CEEA2C00F0F688 /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewModel.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/CameraViewModel.swift"; sourceTree = "<group>"; };
+		9E9388F529CEEA2C00F0F688 /* InfoPanelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoPanelView.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/InfoPanelView.swift"; sourceTree = "<group>"; };
+		9E9388F629CEEA2C00F0F688 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/ImageLoader.swift"; sourceTree = "<group>"; };
+		9E9388F729CEEA2C00F0F688 /* CaptureGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaptureGalleryView.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/CaptureGalleryView.swift"; sourceTree = "<group>"; };
+		9E9388F929CEEA2C00F0F688 /* CameraPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraPreviewView.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/CameraPreviewView.swift"; sourceTree = "<group>"; };
+		9E9388FA29CEEA2C00F0F688 /* CaptureFolderState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaptureFolderState.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/CaptureFolderState.swift"; sourceTree = "<group>"; };
+		9E9388FB29CEEA2C00F0F688 /* HelpPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpPageView.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/HelpPageView.swift"; sourceTree = "<group>"; };
+		9E9388FC29CEEA2C00F0F688 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/ContentView.swift"; sourceTree = "<group>"; };
+		9E9388FD29CEEA2C00F0F688 /* CaptureFoldersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaptureFoldersView.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/CaptureFoldersView.swift"; sourceTree = "<group>"; };
+		9E9388FE29CEEA2D00F0F688 /* Capture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Capture.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/Capture.swift"; sourceTree = "<group>"; };
+		9E9388FF29CEEA2D00F0F688 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCaptureDelegate.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/PhotoCaptureDelegate.swift"; sourceTree = "<group>"; };
+		9E93890029CEEA2D00F0F688 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerView.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/TimerView.swift"; sourceTree = "<group>"; };
+		9E93890129CEEA2D00F0F688 /* TriggerEveryTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TriggerEveryTimer.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/TriggerEveryTimer.swift"; sourceTree = "<group>"; };
+		9E93890229CEEA2D00F0F688 /* AsyncImageHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AsyncImageHelpers.swift; path = "../../../../Downloads/TakingPicturesFor3DObjectCapture-2/CaptureSample/AsyncImageHelpers.swift"; sourceTree = "<group>"; };
 		9ED57E0629BEEC43006FDA43 /* ARDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDataModel.swift; sourceTree = "<group>"; };
 		9ED57E2429C59B51006FDA43 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = main.swift; path = ../../../Downloads/CreatingAPhotogrammetryCommandLineApp/HelloPhotogrammetry/main.swift; sourceTree = "<group>"; };
 		9ED57E2529C59B6C006FDA43 /* CreatingAPhotogrammetryCommandLineApp.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = CreatingAPhotogrammetryCommandLineApp.zip; path = ../../../Downloads/CreatingAPhotogrammetryCommandLineApp.zip; sourceTree = "<group>"; };
@@ -225,13 +219,6 @@
 				9ED57E3E29C96BCA006FDA43 /* ProfileTab */,
 			);
 			path = modelViews;
-			sourceTree = "<group>";
-		};
-		9E93886429CEB1A600F0F688 /* Capture */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Capture;
 			sourceTree = "<group>";
 		};
 		9ED57E0829C41F08006FDA43 /* Frameworks */ = {
@@ -349,26 +336,22 @@
 		9EF2023229857EDA00CA87FD /* Metrics */ = {
 			isa = PBXGroup;
 			children = (
-				9E93886429CEB1A600F0F688 /* Capture */,
-				9E93883F29CEAF1500F0F688 /* AsyncImageHelpers.swift */,
-				9E93884A29CEAF1500F0F688 /* CameraPreviewView.swift */,
-				9E93884D29CEAF1500F0F688 /* CameraView.swift */,
-				9E93884829CEAF1500F0F688 /* CameraViewModel.swift */,
-				9E93885029CEAF1500F0F688 /* Capture.swift */,
-				9E93884929CEAF1500F0F688 /* CaptureFolderState.swift */,
-				9E93884B29CEAF1500F0F688 /* CaptureFoldersView.swift */,
-				9E93884C29CEAF1500F0F688 /* CaptureGalleryView.swift */,
-				9E93884029CEAF1500F0F688 /* CaptureInfo.swift */,
-				9E93884E29CEAF1500F0F688 /* CaptureSample */,
-				9E93883E29CEAF1500F0F688 /* CaptureSampleApp.swift */,
-				9E93884129CEAF1500F0F688 /* ContentView.swift */,
-				9E93884429CEAF1500F0F688 /* HelpPageView.swift */,
-				9E93884729CEAF1500F0F688 /* ImageLoader.swift */,
-				9E93884229CEAF1500F0F688 /* InfoPanelView.swift */,
-				9E93884529CEAF1500F0F688 /* PhotoCaptureDelegate.swift */,
-				9E93884F29CEAF1500F0F688 /* Preview Content */,
-				9E93884629CEAF1500F0F688 /* TimerView.swift */,
-				9E93884329CEAF1500F0F688 /* TriggerEveryTimer.swift */,
+				9E93890229CEEA2D00F0F688 /* AsyncImageHelpers.swift */,
+				9E9388F929CEEA2C00F0F688 /* CameraPreviewView.swift */,
+				9E9388F229CEEA2C00F0F688 /* CameraView.swift */,
+				9E9388F429CEEA2C00F0F688 /* CameraViewModel.swift */,
+				9E9388FE29CEEA2D00F0F688 /* Capture.swift */,
+				9E9388FA29CEEA2C00F0F688 /* CaptureFolderState.swift */,
+				9E9388FD29CEEA2C00F0F688 /* CaptureFoldersView.swift */,
+				9E9388F729CEEA2C00F0F688 /* CaptureGalleryView.swift */,
+				9E9388F329CEEA2C00F0F688 /* CaptureInfo.swift */,
+				9E9388FC29CEEA2C00F0F688 /* ContentView.swift */,
+				9E9388FB29CEEA2C00F0F688 /* HelpPageView.swift */,
+				9E9388F629CEEA2C00F0F688 /* ImageLoader.swift */,
+				9E9388F529CEEA2C00F0F688 /* InfoPanelView.swift */,
+				9E9388FF29CEEA2D00F0F688 /* PhotoCaptureDelegate.swift */,
+				9E93890029CEEA2D00F0F688 /* TimerView.swift */,
+				9E93890129CEEA2D00F0F688 /* TriggerEveryTimer.swift */,
 				6B6E443E29AF14AB005F8DE5 /* Extension */,
 				9E1EF49329AF0D6C006B5F80 /* MVVM */,
 				6B6287D629AB62CD002556F7 /* SwitchTableViewCell.swift */,
@@ -506,12 +489,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E93886229CEAF1500F0F688 /* Preview Content in Resources */,
 				9EF2024029857EDB00CA87FD /* LaunchScreen.storyboard in Resources */,
 				9E5A2AE529ABCB3D001A7B32 /* GoogleService-Info.plist in Resources */,
 				9EF2023D29857EDB00CA87FD /* Assets.xcassets in Resources */,
 				9EF2023B29857EDA00CA87FD /* Main.storyboard in Resources */,
-				9E93886129CEAF1500F0F688 /* CaptureSample in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,49 +517,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E93885929CEAF1500F0F688 /* TimerView.swift in Sources */,
 				9E5A2AE329ABC8E3001A7B32 /* CreateAccountViewController.swift in Sources */,
 				6B6287D529AB420E002556F7 /* SettingTableViewCell.swift in Sources */,
 				9ED57E0729BEEC43006FDA43 /* ARDataModel.swift in Sources */,
 				9E76636F29A397270066E67A /* WorkTableViewCell.swift in Sources */,
 				9E76636429A38EA80066E67A /* FYPViewController.swift in Sources */,
 				6B6E443D29AF0EED005F8DE5 /* OnboardingViewController.swift in Sources */,
-				9E93885B29CEAF1500F0F688 /* CameraViewModel.swift in Sources */,
-				9E93885829CEAF1500F0F688 /* PhotoCaptureDelegate.swift in Sources */,
 				9E76636629A38ED70066E67A /* WorkTableViewController.swift in Sources */,
 				6B6287D329AB3930002556F7 /* SettingsViewController.swift in Sources */,
 				6B6E444229AF1628005F8DE5 /* OnboardingSlide.swift in Sources */,
+				9E93890F29CEEA2D00F0F688 /* CaptureFoldersView.swift in Sources */,
 				9E8853AA29AD2CC60067D497 /* post.swift in Sources */,
-				9E93885329CEAF1500F0F688 /* CaptureInfo.swift in Sources */,
-				9E93885229CEAF1500F0F688 /* AsyncImageHelpers.swift in Sources */,
-				9E93886029CEAF1500F0F688 /* CameraView.swift in Sources */,
-				9E93885A29CEAF1500F0F688 /* ImageLoader.swift in Sources */,
-				9E93885529CEAF1500F0F688 /* InfoPanelView.swift in Sources */,
 				6B6287D729AB62CD002556F7 /* SwitchTableViewCell.swift in Sources */,
-				9E93885729CEAF1500F0F688 /* HelpPageView.swift in Sources */,
+				9E93890E29CEEA2D00F0F688 /* ContentView.swift in Sources */,
 				9E8853B029AE6C140067D497 /* RoomCaptureViewController.swift in Sources */,
 				6B429E6F29B477A300525570 /* SavedarViewController.swift in Sources */,
 				9E8853AC29AD2CE40067D497 /* FYPPostHeaderTableViewCell.swift in Sources */,
+				9E93890D29CEEA2D00F0F688 /* HelpPageView.swift in Sources */,
+				9E93890C29CEEA2D00F0F688 /* CaptureFolderState.swift in Sources */,
 				9E1BE9E329AB1E2F0057C4DC /* ProfileTableViewCell.swift in Sources */,
-				9E93886329CEAF1500F0F688 /* Capture.swift in Sources */,
-				9E93885D29CEAF1500F0F688 /* CameraPreviewView.swift in Sources */,
-				9E93885629CEAF1500F0F688 /* TriggerEveryTimer.swift in Sources */,
-				9E93885E29CEAF1500F0F688 /* CaptureFoldersView.swift in Sources */,
-				9E93885129CEAF1500F0F688 /* CaptureSampleApp.swift in Sources */,
 				9EFCCC9529A4D8C70076D57E /* WorkDataModel.swift in Sources */,
-				9E93885C29CEAF1500F0F688 /* CaptureFolderState.swift in Sources */,
+				9E93890529CEEA2D00F0F688 /* CaptureInfo.swift in Sources */,
 				9EF2023629857EDA00CA87FD /* CameraViewController.swift in Sources */,
+				9E93890929CEEA2D00F0F688 /* CaptureGalleryView.swift in Sources */,
 				9EF2023429857EDA00CA87FD /* AppDelegate.swift in Sources */,
 				9E8853AE29AD2CF00067D497 /* FYPPostTableViewCell.swift in Sources */,
-				9E93885F29CEAF1500F0F688 /* CaptureGalleryView.swift in Sources */,
 				9E1BE9E129AB1E170057C4DC /* ProfileTableViewController.swift in Sources */,
 				6B429E6B29B4747900525570 /* SavedarCollectionViewCell.swift in Sources */,
+				9E93890429CEEA2D00F0F688 /* CameraView.swift in Sources */,
+				9E93890B29CEEA2D00F0F688 /* CameraPreviewView.swift in Sources */,
 				9E5A2AE129ABC7EA001A7B32 /* LoginViewController.swift in Sources */,
+				9E93891329CEEA2D00F0F688 /* TriggerEveryTimer.swift in Sources */,
+				9E93890629CEEA2D00F0F688 /* CameraViewModel.swift in Sources */,
 				6B6E444029AF14EA005F8DE5 /* UIView+Extension.swift in Sources */,
-				9E93885429CEAF1500F0F688 /* ContentView.swift in Sources */,
 				9EF2023829857EDA00CA87FD /* Experience.rcproject in Sources */,
+				9E93891029CEEA2D00F0F688 /* Capture.swift in Sources */,
+				9E93890829CEEA2D00F0F688 /* ImageLoader.swift in Sources */,
 				6B6E444429AF1B18005F8DE5 /* OnboardingCollectionViewCell.swift in Sources */,
 				9E31BB6129CAC16500793010 /* PhotoViewController.swift in Sources */,
+				9E93891129CEEA2D00F0F688 /* PhotoCaptureDelegate.swift in Sources */,
+				9E93891229CEEA2D00F0F688 /* TimerView.swift in Sources */,
+				9E93891429CEEA2D00F0F688 /* AsyncImageHelpers.swift in Sources */,
+				9E93890729CEEA2D00F0F688 /* InfoPanelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

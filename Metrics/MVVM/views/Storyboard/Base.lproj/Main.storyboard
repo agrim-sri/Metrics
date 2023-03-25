@@ -114,7 +114,7 @@
                 <hostingController id="KUq-fh-tsj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ree-9C-Re7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3810" y="-68"/>
+            <point key="canvasLocation" x="3735" y="-139"/>
         </scene>
         <!--Room Capture View Controller-->
         <scene sceneID="bYi-Cf-uiF">
@@ -162,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuF-3q-dNY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3736" y="555"/>
+            <point key="canvasLocation" x="3735" y="427"/>
         </scene>
         <!--Camera-->
         <scene sceneID="i5v-VX-PH0">
