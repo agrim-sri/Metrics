@@ -1,9 +1,10 @@
-/*
-See LICENSE folder for this sample’s licensing information.
+//
+//  CaptureGalleryView.swift
+//  Metrics
+//
+//  Created by Agrim Srivastava on 27/03/23.
+//
 
-Abstract:
-A custom view that displays the contents of a capture directory.
-*/
 import Combine
 import Foundation
 import SwiftUI

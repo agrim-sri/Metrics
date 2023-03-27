@@ -58,11 +58,11 @@ class ProfileTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sub = models[indexPath.row]
-         
-        self.performSegue(withIdentifier: "SavedarViewController", sender: self)
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let sub = models[indexPath.row]
+//
+//        self.performSegue(withIdentifier: "SavedarViewController", sender: self)
+//    }
 
     /*
     // Override to support conditional editing of the table view.

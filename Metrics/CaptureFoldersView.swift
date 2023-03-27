@@ -1,9 +1,10 @@
-/*
-See LICENSE folder for this sample’s licensing information.
+//
+//  CaptureFoldersView.swift
+//  Metrics
+//
+//  Created by Agrim Srivastava on 27/03/23.
+//
 
-Abstract:
-A SwiftUI view that displays folders of captured images.
-*/
 import Combine
 import Foundation
 import SwiftUI

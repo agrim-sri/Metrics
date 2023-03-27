@@ -1,9 +1,10 @@
-/*
-See LICENSE folder for this sample’s licensing information.
+//
+//  CameraView.swift
+//  Metrics
+//
+//  Created by Agrim Srivastava on 27/03/23.
+//
 
-Abstract:
-A view that displays the camera image and capture button.
-*/
 import Foundation
 import SwiftUI
 

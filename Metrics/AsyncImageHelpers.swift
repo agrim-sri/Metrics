@@ -1,10 +1,9 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-A helper class that loads a single image and its corresponding thumbnail
- in the background.
-*/
+//
+//  AsyncImageHelpers.swift
+//  Metrics
+//
+//  Created by Agrim Srivastava on 27/03/23.
+//
 
 import AVFoundation
 import Combine

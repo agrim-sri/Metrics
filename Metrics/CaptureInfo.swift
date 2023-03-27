@@ -1,9 +1,10 @@
-/*
-See LICENSE folder for this sample’s licensing information.
+//
+//  CaptureInfo.swift
+//  Metrics
+//
+//  Created by Agrim Srivastava on 27/03/23.
+//
 
-Abstract:
-A data object that holds a single image and its metadata.
-*/
 import Combine
 import Foundation
 import os

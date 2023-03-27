@@ -1,9 +1,10 @@
-/*
-See LICENSE folder for this sample’s licensing information.
+//
+//  CameraPreviewView.swift
+//  Metrics
+//
+//  Created by Agrim Srivastava on 27/03/23.
+//
 
-Abstract:
-CameraView is the primary view displayed during image capture.
-*/
 import AVFoundation
 import SwiftUI
 import UIKit
@@ -61,4 +62,3 @@ struct CameraPreviewView: UIViewRepresentable {
     
     func updateUIView(_ uiView: PreviewView, context: Context) {  }
 }
-

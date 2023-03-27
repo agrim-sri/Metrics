@@ -1,9 +1,10 @@
-/*
-See LICENSE folder for this sample’s licensing information.
+//
+//  ImageLoader.swift
+//  Metrics
+//
+//  Created by Agrim Srivastava on 27/03/23.
+//
 
-Abstract:
-Asynchronous image-loading helper class.
-*/
 import Combine
 import CoreGraphics
 import CoreImage

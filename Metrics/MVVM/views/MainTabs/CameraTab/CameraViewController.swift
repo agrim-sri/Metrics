@@ -74,3 +74,4 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendere
         return UIHostingController(coder: coder, rootView: ContentView(model: CameraViewModel()))
     }
 }
+

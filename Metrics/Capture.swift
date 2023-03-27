@@ -1,9 +1,10 @@
-/*
-See LICENSE folder for this sample’s licensing information.
+//
+//  Capture.swift
+//  Metrics
+//
+//  Created by Agrim Srivastava on 27/03/23.
+//
 
-Abstract:
-The data model for captured images and their associated metadata.
-*/
 import AVFoundation
 import Combine
 import CoreGraphics
@@ -131,4 +132,3 @@ struct Capture: Identifiable {
         }
     }
 }
-

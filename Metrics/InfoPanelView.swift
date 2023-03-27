@@ -1,9 +1,9 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-Information panel.
-*/
+//
+//  InfoPanelView.swift
+//  Metrics
+//
+//  Created by Agrim Srivastava on 27/03/23.
+//
 
 import Combine
 import SwiftUI

@@ -1,9 +1,9 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-Helper class for listing, deleting, and viewing app document directory "capture" folders.
-*/
+//
+//  CaptureFolderState.swift
+//  Metrics
+//
+//  Created by Agrim Srivastava on 27/03/23.
+//
 
 import Combine
 import Foundation
