@@ -13,11 +13,9 @@ import SwiftUI
 
 class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendererDelegate {
     
-    var modelList = ["3d01","3d02","3d03","3d04","3d05"]
+
     
-    
-    @IBOutlet weak var myCollectionView: UICollectionView!
-    
+    @IBOutlet weak var containerARView: UIView!
     
     @IBOutlet weak var containerRoomCaptureView: UIView!
     @IBOutlet weak var containerMeasureView: UIView!
@@ -47,23 +45,28 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendere
     func setUp() {
         containerMeasureView.isHidden = true
         containerRoomCaptureView.isHidden = true
+        containerARView.isHidden = false
     }
     
     @IBAction func didTapSegment(_ sender: UISegmentedControl) {
         containerMeasureView.isHidden = true
         containerRoomCaptureView.isHidden = true
+        containerARView.isHidden = false
         
         if sender.selectedSegmentIndex == 0 {
             containerMeasureView.isHidden = true
             containerRoomCaptureView.isHidden = true
+            containerARView.isHidden = false
         }
         else if sender.selectedSegmentIndex == 1 {
             containerMeasureView.isHidden = false
             containerRoomCaptureView.isHidden = true
+            containerARView.isHidden = true
         }
         else {
             containerMeasureView.isHidden = true
             containerRoomCaptureView.isHidden = false
+            containerARView.isHidden = true
         }
     }
     @IBAction func shareButtonTapped(_ sender: UIButton) {
@@ -80,20 +83,5 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendere
     }
 }
 
-extension CameraViewController:UICollectionViewDelegate, UICollectionViewDataSource
-{
-    func collectionView( _ collectionView: UICollectionView, numberOfItemsInSection section: Int)
-    -> Int {
-        return modelList.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)
-    -> UICollectionViewCell {
-        let cell = myCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyCollectionViewCell
-        cell.myImage.image = UIImage(named: modelList[indexPath.row])
-        cell.myImage.layer.cornerRadius = cell.frame.height/2
-        return cell
-        
-    }
-}
+
 
