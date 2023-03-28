@@ -19,6 +19,7 @@ struct CameraView: View {
     let aspectRatio: CGFloat = 4.0 / 3.0
     let previewCornerRadius: CGFloat = 15.0
     
+    
     var body: some View {
         NavigationView {
             GeometryReader { geometryReader in
