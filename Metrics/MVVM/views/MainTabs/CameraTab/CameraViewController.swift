@@ -13,6 +13,7 @@ import SwiftUI
 
 class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendererDelegate {
     
+    @IBOutlet var segmentButton: UISegmentedControl!
     
     @IBOutlet weak var containerRoomCaptureView: UIView!
     @IBOutlet weak var containerMeasureView: UIView!
@@ -62,12 +63,34 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendere
         }
     }
     @IBAction func shareButtonTapped(_ sender: UIButton) {
-        let shareText = "Check out this cool thing I found!"
-            let shareURL = URL(string: "https://www.example.com/cool-thing")!
+        if segmentButton.selectedSegmentIndex == 0 {
+            let shareText = "Check out this cool thing I found!"
+                let shareURL = URL(string: "https://www.example.com/cool-thing")!
 
-            let activityViewController = UIActivityViewController(activityItems: [shareText, shareURL], applicationActivities: nil)
+                let activityViewController = UIActivityViewController(activityItems: [shareText, shareURL], applicationActivities: nil)
 
-            present(activityViewController, animated: true, completion: nil)
+                present(activityViewController, animated: true, completion: nil)
+        }
+        else if segmentButton.selectedSegmentIndex == 1 {
+            
+        }
+        else {
+            let destinationURL = FileManager.default.temporaryDirectory.appending(path: "Room.usdz")
+            //Metrics.capturedRoom.append(finalResults!)
+            do {
+                try RoomCaptureViewController().finalResults?.export(to: destinationURL, exportOptions: .parametric)
+                
+                let activityVC = UIActivityViewController(activityItems: [destinationURL], applicationActivities: nil)
+                activityVC.modalPresentationStyle = .popover
+                
+                present(activityVC, animated: true, completion: nil)
+                if let popOver = activityVC.popoverPresentationController {
+                    popOver.sourceView = self.shareButton
+                }
+            } catch {
+                print("Error = \(error)")
+            }
+        }
     }
     
     @IBSegueAction func showSwiftUi(_ coder: NSCoder) -> UIViewController? {

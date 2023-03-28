@@ -47,16 +47,16 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="rYP-Yc-R9o" secondAttribute="trailing" id="8e7-6n-1yJ"/>
                             <constraint firstItem="rYP-Yc-R9o" firstAttribute="top" secondItem="yiT-Cz-EPb" secondAttribute="top" id="CCM-jN-Ydy"/>
+                            <constraint firstItem="MV8-wv-Rbq" firstAttribute="trailing" secondItem="yiT-Cz-EPb" secondAttribute="trailing" id="HvJ-Ln-IQ8"/>
                             <constraint firstItem="rYP-Yc-R9o" firstAttribute="leading" secondItem="yiT-Cz-EPb" secondAttribute="leading" id="ShY-1q-Ny4"/>
+                            <constraint firstItem="MV8-wv-Rbq" firstAttribute="leading" secondItem="yiT-Cz-EPb" secondAttribute="leading" id="SpI-bz-MB3"/>
                             <constraint firstItem="rYP-Yc-R9o" firstAttribute="leading" secondItem="M6L-Xt-5cQ" secondAttribute="leading" id="UUE-cF-7BS"/>
                             <constraint firstItem="rYP-Yc-R9o" firstAttribute="bottom" secondItem="h6z-Iy-sJ4" secondAttribute="bottom" id="WfJ-ji-j7C"/>
+                            <constraint firstItem="MV8-wv-Rbq" firstAttribute="top" secondItem="yiT-Cz-EPb" secondAttribute="top" id="XNk-9L-gWc"/>
+                            <constraint firstItem="MV8-wv-Rbq" firstAttribute="bottom" secondItem="yiT-Cz-EPb" secondAttribute="bottom" id="bY7-3c-FZ5"/>
                             <constraint firstItem="rYP-Yc-R9o" firstAttribute="trailing" secondItem="yiT-Cz-EPb" secondAttribute="trailing" id="cLA-NA-eoR"/>
                             <constraint firstItem="rYP-Yc-R9o" firstAttribute="bottom" secondItem="yiT-Cz-EPb" secondAttribute="bottom" id="gwr-iG-C8O"/>
-                            <constraint firstItem="rYP-Yc-R9o" firstAttribute="bottom" secondItem="MV8-wv-Rbq" secondAttribute="bottom" id="hys-wZ-Ibb"/>
-                            <constraint firstItem="rYP-Yc-R9o" firstAttribute="leading" secondItem="MV8-wv-Rbq" secondAttribute="leading" id="kVC-SJ-Txu"/>
                             <constraint firstItem="rYP-Yc-R9o" firstAttribute="top" secondItem="h6z-Iy-sJ4" secondAttribute="top" id="o2Z-gb-dp3"/>
-                            <constraint firstItem="rYP-Yc-R9o" firstAttribute="trailing" secondItem="MV8-wv-Rbq" secondAttribute="trailing" id="yMk-BP-Pf0"/>
-                            <constraint firstItem="rYP-Yc-R9o" firstAttribute="top" secondItem="MV8-wv-Rbq" secondAttribute="top" id="ymz-BW-39d"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7cH-by-Z89">
@@ -101,6 +101,7 @@
                         <outlet property="arView" destination="rYP-Yc-R9o" id="ctY-Nz-mZe"/>
                         <outlet property="containerMeasureView" destination="yiT-Cz-EPb" id="EJl-CY-zRg"/>
                         <outlet property="containerRoomCaptureView" destination="MV8-wv-Rbq" id="Fyv-ma-za6"/>
+                        <outlet property="segmentButton" destination="58q-St-9CG" id="XgA-sZ-fac"/>
                         <outlet property="shareButton" destination="LyP-EX-yFU" id="bgt-IO-95x"/>
                     </connections>
                 </viewController>
@@ -133,30 +134,41 @@
                                     <action selector="exportResults:" destination="Ccq-uc-T7C" eventType="touchUpInside" id="jdQ-2a-NKt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BV4-Xw-3Fw">
+                                <rect key="frame" x="20" y="680" width="77" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelScanningButtonTapped:" destination="Ccq-uc-T7C" eventType="touchUpInside" id="7hs-xy-TKP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1V-X0-EcJ">
+                                <rect key="frame" x="329" y="680" width="65" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                <connections>
+                                    <action selector="doneScanningButtonTapped:" destination="Ccq-uc-T7C" eventType="touchUpInside" id="ty1-BY-fQo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VTV-SL-Jki"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BV4-Xw-3Fw" firstAttribute="leading" secondItem="rq6-gS-l7x" secondAttribute="leadingMargin" id="2Ss-ZQ-rCU"/>
+                            <constraint firstItem="s1V-X0-EcJ" firstAttribute="top" secondItem="VTV-SL-Jki" secondAttribute="top" constant="632" id="3gb-Es-HaF"/>
+                            <constraint firstItem="s1V-X0-EcJ" firstAttribute="trailing" secondItem="rq6-gS-l7x" secondAttribute="trailingMargin" id="Bth-bq-bOQ"/>
+                            <constraint firstItem="s1V-X0-EcJ" firstAttribute="baseline" secondItem="BV4-Xw-3Fw" secondAttribute="baseline" id="Pnp-Gb-ASg"/>
+                        </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Cancel" id="Vsw-ZU-1QC">
-                            <connections>
-                                <action selector="cancelScanning:" destination="Ccq-uc-T7C" id="Vjz-AH-k3L"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem title="Done" id="b0C-wP-HFR">
-                            <connections>
-                                <action selector="doneScanning:" destination="Ccq-uc-T7C" id="16O-Qd-Ise"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="5fh-N3-X1Y">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="6jb-Zr-o37"/>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="qPh-Wu-HwV"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="cancelButton" destination="Vsw-ZU-1QC" id="e7B-zt-fQp"/>
-                        <outlet property="doneButton" destination="b0C-wP-HFR" id="SxW-Cu-nDg"/>
+                        <outlet property="cancelButton" destination="BV4-Xw-3Fw" id="gei-MB-xJW"/>
+                        <outlet property="doneButton" destination="s1V-X0-EcJ" id="pIX-fv-hZd"/>
                         <outlet property="exportButton" destination="bG4-7y-ICE" id="ZH4-dl-5OE"/>
                     </connections>
                 </viewController>

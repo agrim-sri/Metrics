@@ -7,39 +7,24 @@
 
 import UIKit
 import RoomPlan
-import SceneKit
-import ARKit
-
 
 class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, RoomCaptureSessionDelegate {
     
     @IBOutlet var exportButton: UIButton?
     
-    @IBOutlet var doneButton: UIBarButtonItem?
-    @IBOutlet var cancelButton: UIBarButtonItem?
-
-   // @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet var doneButton: UIButton?
+    @IBOutlet var cancelButton: UIButton?
     
     private var isScanning: Bool = false
     
     private var roomCaptureView: RoomCaptureView!
     private var roomCaptureSessionConfig: RoomCaptureSession.Configuration = RoomCaptureSession.Configuration()
     
-    private var finalResults: CapturedRoom?
-    
-    
-//    let material = SCNMaterial()
-//
-//    let plane = SCNPlane(width: 1.0, height: 1.0)
-    
-    
-    
-    
-
-    
+    var finalResults: CapturedRoom?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Set up after loading the view.
         setupRoomCaptureView()
     }
@@ -61,20 +46,6 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
         super.viewWillDisappear(flag)
         stopSession()
     }
-//    override func viewWillAppear(_ animated: Bool) {
-//        let screenshot = sceneView.snapshot()
-//        let roomPlanNode = SCNNode(geometry: plane)
-//        let floorNode = roomPlanNode.childNode(withName: "floor", recursively: true)
-//        material.diffuse.contents = screenshot
-//        floorNode?.geometry?.materials = [material]
-////        for wallNode in roomPlanNode.childNodes {
-////            if wallNode.geometry?.primitiveType == .box {
-////                wallNode.geometry?.materials = [material]
-////            }
-////        }
-//        sceneView.scene.rootNode.addChildNode(roomPlanNode)
-//
-//    }
     
     private func startSession() {
         isScanning = true
@@ -100,19 +71,20 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
         finalResults = processedResult
     }
     
-    @IBAction func doneScanning(_ sender: UIBarButtonItem) {
-        if isScanning { stopSession() } else { cancelScanning(sender) }
-    }
 
-    @IBAction func cancelScanning(_ sender: UIBarButtonItem) {
-        navigationController?.dismiss(animated: true)
+    @IBAction func doneScanningButtonTapped(_ sender: UIButton) {
+        if isScanning { stopSession() } else { cancelScanningButtonTapped(sender) }
     }
     
+    @IBAction func cancelScanningButtonTapped(_ sender: UIButton) {        navigationController?.dismiss(animated: true)
+        
+    }
     // Export the USDZ output by specifying the `.parametric` export option.
     // Alternatively, `.mesh` exports a nonparametric file and `.all`
     // exports both in a single USDZ.
     @IBAction func exportResults(_ sender: UIButton) {
         let destinationURL = FileManager.default.temporaryDirectory.appending(path: "Room.usdz")
+        //Metrics.capturedRoom.append(finalResults!)
         do {
             try finalResults?.export(to: destinationURL, exportOptions: .parametric)
             
@@ -127,7 +99,7 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
             print("Error = \(error)")
         }
     }
-    
+
     private func setActiveNavBar() {
         UIView.animate(withDuration: 1.0, animations: {
             self.cancelButton?.tintColor = .white
@@ -147,4 +119,3 @@ class RoomCaptureViewController: UIViewController, RoomCaptureViewDelegate, Room
         }
     }
 }
-

@@ -32,6 +32,7 @@
 		9E0CCE5729D1EB1000B00D09 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0CCE5629D1EB1000B00D09 /* PhotoCaptureDelegate.swift */; };
 		9E0CCE5929D1EB2100B00D09 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0CCE5829D1EB2100B00D09 /* TimerView.swift */; };
 		9E0CCE5B29D1EB3800B00D09 /* TriggerEveryTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0CCE5A29D1EB3800B00D09 /* TriggerEveryTimer.swift */; };
+		9E0CCE5D29D203FD00B00D09 /* RoomPlanDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0CCE5C29D203FD00B00D09 /* RoomPlanDataModel.swift */; };
 		9E1BE9E129AB1E170057C4DC /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1BE9E029AB1E170057C4DC /* ProfileTableViewController.swift */; };
 		9E1BE9E329AB1E2F0057C4DC /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1BE9E229AB1E2F0057C4DC /* ProfileTableViewCell.swift */; };
 		9E31BB6129CAC16500793010 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E31BB6029CAC16500793010 /* PhotoViewController.swift */; };
@@ -102,6 +103,7 @@
 		9E0CCE5629D1EB1000B00D09 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
 		9E0CCE5829D1EB2100B00D09 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		9E0CCE5A29D1EB3800B00D09 /* TriggerEveryTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerEveryTimer.swift; sourceTree = "<group>"; };
+		9E0CCE5C29D203FD00B00D09 /* RoomPlanDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomPlanDataModel.swift; sourceTree = "<group>"; };
 		9E1BE9E029AB1E170057C4DC /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		9E1BE9E229AB1E2F0057C4DC /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		9E31BB6029CAC16500793010 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				9EFCCC9429A4D8C70076D57E /* WorkDataModel.swift */,
 				9ED57E0629BEEC43006FDA43 /* ARDataModel.swift */,
 				9E8853A929AD2CC60067D497 /* post.swift */,
+				9E0CCE5C29D203FD00B00D09 /* RoomPlanDataModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				9E5A2AE329ABC8E3001A7B32 /* CreateAccountViewController.swift in Sources */,
 				6B6287D529AB420E002556F7 /* SettingTableViewCell.swift in Sources */,
 				9E0CCE4F29D1EA9A00B00D09 /* ContentView.swift in Sources */,
+				9E0CCE5D29D203FD00B00D09 /* RoomPlanDataModel.swift in Sources */,
 				9E0CCE4B29D1EA4200B00D09 /* CaptureGalleryView.swift in Sources */,
 				9ED57E0729BEEC43006FDA43 /* ARDataModel.swift in Sources */,
 				9E76636F29A397270066E67A /* WorkTableViewCell.swift in Sources */,
@@ -735,7 +739,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P69HM3CA75;
+				DEVELOPMENT_TEAM = GFR6JJW8UN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -751,7 +755,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = in.edu.srm.Metrics;
+				PRODUCT_BUNDLE_IDENTIFIER = in.edu.srm.Metrics.iosapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
