@@ -13,6 +13,11 @@ import SwiftUI
 
 class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendererDelegate {
     
+    var modelList = ["3d01","3d02","3d03","3d04","3d05"]
+    
+    
+    @IBOutlet weak var myCollectionView: UICollectionView!
+    
     
     @IBOutlet weak var containerRoomCaptureView: UIView!
     @IBOutlet weak var containerMeasureView: UIView!
@@ -72,6 +77,23 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, SCNSceneRendere
     
     @IBSegueAction func showSwiftUi(_ coder: NSCoder) -> UIViewController? {
         return UIHostingController(coder: coder, rootView: ContentView(model: CameraViewModel()))
+    }
+}
+
+extension CameraViewController:UICollectionViewDelegate, UICollectionViewDataSource
+{
+    func collectionView( _ collectionView: UICollectionView, numberOfItemsInSection section: Int)
+    -> Int {
+        return modelList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)
+    -> UICollectionViewCell {
+        let cell = myCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyCollectionViewCell
+        cell.myImage.image = UIImage(named: modelList[indexPath.row])
+        cell.myImage.layer.cornerRadius = cell.frame.height/2
+        return cell
+        
     }
 }
 
