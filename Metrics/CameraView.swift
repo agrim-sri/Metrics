@@ -8,8 +8,7 @@
 import Foundation
 import SwiftUI
 
-/// This is the app's primary view. It contains a preview area, a capture button, and a thumbnail view
-/// showing the most recenty captured image.
+
 struct CameraView: View {
     static let buttonBackingOpacity: CGFloat = 0.15
     

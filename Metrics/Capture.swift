@@ -20,25 +20,18 @@ private let logger = Logger(subsystem: "com.apple.sample.CaptureSample",
 /// This is a data object that contains one image and its associated metadata, including gravity, depth,
 /// and alpha mask.
 struct Capture: Identifiable {
-    /// This is the unique ID for this capture.
+
     let id: UInt32
-    
-    /// This is the original photo object, including preview.
     let photo: AVCapturePhoto
-    
-    /// This property returns the image preview. It returns a cached preview if one is available. If there's no
-    /// cached preview, it creates a preview image, caches it, then returns it.
+
     var previewUiImage: UIImage? {
         makePreview()
     }
     
-    /// This property holds the depth data in TIFF format.
     var depthData: Data? = nil
     
-    /// This is the phone's gravity vector at the moment the phone captured the image.
     var gravity: CMAcceleration? = nil
-    
-    /// This view displays the full-size image.
+  
     var uiImage: UIImage {
         return UIImage(data: photo.fileDataRepresentation()!, scale: 1.0)!
     }
@@ -50,10 +43,8 @@ struct Capture: Identifiable {
         self.depthData = depthData
         self.gravity = gravity
     }
-    
-    /// This method writes the captured images to a specified folder. This method saves the image as
-    /// `IMG_<ID>.HEIC`, the depth data, if available, as `IMG_<ID>_depth.TIF`, and the gravity
-    /// vector, if available, as `IMG_<ID>_gravity.TXT`.
+
+    /// saves the image as `IMG_<ID>.HEIC`, the depth data, if available, as `IMG_<ID>_depth.TIF`, and the gravity vector, if available, as `IMG_<ID>_gravity.TXT`.
     func writeAllFiles(to captureDir: URL) throws {
         writeImage(to: captureDir)
         writeGravityIfAvailable(to: captureDir)

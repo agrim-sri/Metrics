@@ -13,9 +13,7 @@ import os
 private let logger = Logger(subsystem: "com.apple.sample.CaptureSample",
                             category: "CaptureFolderState")
 
-/// This helper class loads the contents of an image capture folder. It uses asynchronous calls that run on a
-/// background queue and includes static methods for retrieving the top-level capture folder, which contains
-/// separate subfolders for each capture. Use a different instance of this class for each capture folder.
+
 class CaptureFolderState: ObservableObject {
     static private let workQueue = DispatchQueue(label: "CaptureFolderState.Work",
                                                  qos: .userInitiated)

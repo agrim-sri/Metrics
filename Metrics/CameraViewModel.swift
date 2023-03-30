@@ -15,47 +15,27 @@ import os
 private let logger = Logger(subsystem: "com.apple.sample.CaptureSample",
                             category: "CameraViewModel")
 
-/// This is a SwiftUI observable data model class that holds all of the app's state and handles all changes
-/// to that state. The app's views observe this object and update themseves to reflect changes.
+
 class CameraViewModel: ObservableObject {
     var session: AVCaptureSession
 
     enum CaptureMode {
-        /// The user has selected manual capture mode, which captures one
-        /// image per button press.
         case manual
-
-        /// The user has selected automatic capture mode, which captures one
-        /// image every specified interval.
         case automatic(everySecs: Double)
     }
 
-    /// This property holds a reference to the most recently captured image and its metadata. The app
-    /// uses this to populate the thumbnail view.
     @Published var lastCapture: Capture? = nil
 
-    /// Returns`true` if there's a camera available.`
     @Published var isCameraAvailable: Bool = false
 
-    /// If `isCameraEnabled` is `true`, this property indicates whether the app is able to take
-    /// high-quality photos.
     @Published var isHighQualityMode: Bool = false
 
-    /// This property returns `true` if depth data is supported and available on this device. By default,
-    /// the app tries to turn depth data on during setup and sets this to `true` if successful.
     @Published var isDepthDataEnabled: Bool = false
 
-    /// This property returns `true` if motion data is available and enabled. By default, the app tries to
-    /// enable motion data during setup and sets this to `true` if successful.
     @Published var isMotionDataEnabled: Bool = false
 
-    /// This property  maintains references to the location of each image and its corresponding metadata in
-    /// the file system.
     @Published var captureFolderState: CaptureFolderState?
 
-    /// This property returns the current capture mode. This property doesn't indicate whether the capture
-    /// timer is currently running. When you set this to `.manual`, it cancels the timer used by automatic
-    /// mode.
     @Published var captureMode: CaptureMode = .manual {
         willSet(newMode) {
             // If the app is currently in auto mode, stop any timers.
@@ -66,9 +46,6 @@ class CameraViewModel: ObservableObject {
         }
 
         didSet {
-            // After this property is set, create a timer. If the user presses
-            // the capture button with automatic mode enabled, the app toggles
-            // the timer.
             if case .automatic(let intervalSecs) = captureMode {
                 autoCaptureIntervalSecs = intervalSecs
                 triggerEveryTimer = TriggerEveryTimer(
@@ -83,13 +60,8 @@ class CameraViewModel: ObservableObject {
             }
         }
     }
-
-    /// This property indicates if auto-capture is currently active. The app sets this to `true` while it's
-    /// automatically capturing images using the timer.
     @Published var isAutoCaptureActive: Bool = false
 
-    /// If `isAutoCaptureActive` is `true`, this property contains the number of seconds until the
-    /// next capture trigger.
     @Published var timeUntilCaptureSecs: Double = 0
 
     var autoCaptureIntervalSecs: Double = 0
@@ -112,14 +84,9 @@ class CameraViewModel: ObservableObject {
     init() {
         session = AVCaptureSession()
 
-        // This is an asynchronous call that begins all setup. It sets
-        // up the camera device, motion device (gravity), and ensures correct
-        // permissions.
         startSetup()
     }
 
-    /// This method advances through the available capture modes, updating `captureMode`.
-    /// This method must be called from the main thread.
     func advanceToNextCaptureMode() {
         dispatchPrecondition(condition: .onQueue(DispatchQueue.main))
         switch captureMode {
@@ -130,9 +97,6 @@ class CameraViewModel: ObservableObject {
         }
     }
 
-    /// When the user presses the capture button, this method is called.
-    /// If captureMode is `.manual`, this method triggers a single image capture.
-    /// If captureMode is `.automatic`, this method toggles the automatic capture timer on and off.
     func captureButtonPressed() {
         switch captureMode {
         case .manual:
@@ -147,19 +111,13 @@ class CameraViewModel: ObservableObject {
         }
     }
 
-    /// This method creates a new capture dictionary and resets the app's capture folder state. It doesn't
-    /// change any`AVCaptureSession` settings.
     func requestNewCaptureFolder() {
         logger.log("Requesting new capture folder...")
 
-        // Invalidate the old state on the main thread, which causes the app
-        // to update its UI.
         DispatchQueue.main.async {
             self.lastCapture = nil
         }
 
-        // Create a directory in the file system on a background thread, then
-        // publish it on the main thread.
         sessionQueue.async {
             do {
                 let newCaptureFolder = try CameraViewModel.createNewCaptureFolder()
@@ -177,12 +135,10 @@ class CameraViewModel: ObservableObject {
     func addCapture(_ capture: Capture) {
         logger.log("Received a new capture id=\(capture.id)")
 
-        // Cache the most recent capture on the main queue.
         DispatchQueue.main.async {
             self.lastCapture = capture
         }
 
-        // Write files in the background.
         guard self.captureDir != nil else {
             return
         }
@@ -202,8 +158,6 @@ class CameraViewModel: ObservableObject {
         captureFolderState?.removeCapture(captureInfo: captureInfo, deleteData: deleteData)
     }
 
-    /// This method starts the setup process, which runs asynchronously. This method requests camera
-    /// access if the user hasn't yet granted it.
     func startSetup() {
         do {
             captureFolderState = try CameraViewModel.createNewCaptureFolder()
@@ -261,8 +215,6 @@ class CameraViewModel: ObservableObject {
     let thumbnailWidth = 512
     let thumbnailHeight = 512
 
-    // This is the unique identifier for the next photo. This value must be
-    // unique within a session.
     private var photoId: UInt32 = 0
 
     private var photoQualityPrioritizationMode: AVCapturePhotoOutput.QualityPrioritization =
@@ -288,7 +240,7 @@ class CameraViewModel: ObservableObject {
         case failed(msg: String)
     }
 
-    /// This method processes the session setup results asynchronously.
+
     private var setupResult: SessionSetupResult = .inProgress {
         didSet {
             logger.log("didSet setupResult=\(String(describing: self.setupResult))")
@@ -307,23 +259,16 @@ class CameraViewModel: ObservableObject {
 
     private var videoDeviceInput: AVCaptureDeviceInput? = nil
 
-    /// This private property holds the current state of the session. The app uses this to pause the app
-    /// when it goes into the background and to resume the app when it comes back to the foreground.
     private var isSessionRunning = false
 
-    /// This queue is used to communicate with the session and other session objects.
     private let sessionQueue = DispatchQueue(label: "CameraViewModel: sessionQueue")
 
     private let motionManager = CMMotionManager()
 
     private var photoOutput = AVCapturePhotoOutput()
 
-    /// This property holds references to active `PhotoCaptureProcessor` instances. The app removes
-    /// instances when the corresponding capture is complete.
     private var inProgressPhotoCaptureDelegates = [Int64: PhotoCaptureProcessor]()
 
-    /// This helper class is used during automatic mode to trigger image captures.  When the app is in
-    /// manual mode, it's `nil`.
     private var triggerEveryTimer: TriggerEveryTimer? = nil
 
     // MARK: - Private Functions
@@ -332,9 +277,6 @@ class CameraViewModel: ObservableObject {
         logger.log("Capture photo called...")
         dispatchPrecondition(condition: .onQueue(.main))
 
-        /// This property retrieves and stores the video preview layer's video orientation on the main
-        /// queue before starting the session queue. This ensures that UI elements can be accessed on
-        /// the main thread.
         let videoPreviewLayerOrientation = session.connections[0].videoOrientation
 
         sessionQueue.async {
@@ -390,9 +332,6 @@ class CameraViewModel: ObservableObject {
             let photoCaptureProcessor = self.makeNewPhotoCaptureProcessor(photoId: self.photoId,
                                                                           photoSettings: photoSettings)
 
-            // The photo output holds a weak reference to the photo capture
-            // delegate, so it also stores it in an array, which maintains a
-            // strong reference so the system won't deallocate it.
             self.inProgressPhotoCaptureDelegates[
                 photoCaptureProcessor.requestedPhotoSettings.uniqueID] = photoCaptureProcessor
             logger.log("inProgressCaptures=\(self.inProgressPhotoCaptureDelegates.count)")
@@ -425,8 +364,6 @@ class CameraViewModel: ObservableObject {
         return photoCaptureProcessor
     }
 
-    /// This method starts the automatic capture timer, which the app only uses when the user enables
-    /// `.automatic` mode.
     private func startAutomaticCapture() {
         dispatchPrecondition(condition: .onQueue(.main))
         precondition(triggerEveryTimer != nil)
@@ -440,7 +377,6 @@ class CameraViewModel: ObservableObject {
         isAutoCaptureActive = true
     }
 
-    /// This method stops the automatic capture timer.
     private func stopAutomaticCapture() {
         dispatchPrecondition(condition: .onQueue(.main))
         logger.log("Stop Auto Capture!")
@@ -460,14 +396,11 @@ class CameraViewModel: ObservableObject {
         // Check the camera's authorization status.
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .authorized:
-            // The user has previously granted access to the camera, so there's
-            // no need to do more.
+            
             break
 
         case .notDetermined:
-            // The app hasn't asked the user to grant video access.
-            // Suspend the session queue to delay setup until the app requests
-            // access.
+    
             sessionQueue.suspend()
             AVCaptureDevice.requestAccess(for: .video, completionHandler: { granted in
                 if !granted {
@@ -528,8 +461,6 @@ class CameraViewModel: ObservableObject {
                 && self.photoOutput.maxPhotoQualityPrioritization == .quality
         }
 
-        // Setup was successful, so set this value to tell the UI to enable
-        // the capture buttons.
         setupResult = .success
     }
 
@@ -547,11 +478,9 @@ class CameraViewModel: ObservableObject {
         }
     }
 
-    /// This method checks for a depth-capable dual rear camera and, if found, returns an `AVCaptureDevice`.
     private func getVideoDeviceForPhotogrammetry() throws -> AVCaptureDevice {
         var defaultVideoDevice: AVCaptureDevice?
 
-        // Specify dual camera to get access to depth data.
         if let dualCameraDevice = AVCaptureDevice.default(.builtInDualCamera, for: .video,
                                                           position: .back) {
             logger.log(">>> Got back dual camera!")

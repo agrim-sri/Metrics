@@ -31,17 +31,8 @@
                                     <segue destination="Ccq-uc-T7C" kind="embed" identifier="toRoomCapture" id="E3p-Ed-Kmw"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gM0-9L-ccu">
-                                <rect key="frame" x="170" y="726" width="75" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="circle.inset.filled" catalog="system"/>
-                                </buttonConfiguration>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kvx-gh-6wg" userLabel="AR Container View">
-                                <rect key="frame" x="-7" y="92" width="414" height="718"/>
+                                <rect key="frame" x="-8" y="92" width="414" height="718"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="yo8-r7-AyU" kind="embed" id="Dva-MR-vEM"/>
@@ -1104,7 +1095,6 @@
         <image name="arrow.turn.up.right" catalog="system" width="128" height="99"/>
         <image name="briefcase" catalog="system" width="128" height="100"/>
         <image name="camera" catalog="system" width="128" height="93"/>
-        <image name="circle.inset.filled" catalog="system" width="128" height="123"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="g.circle" catalog="system" width="128" height="123"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
