@@ -32,7 +32,7 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kvx-gh-6wg" userLabel="AR Container View">
-                                <rect key="frame" x="-8" y="92" width="414" height="718"/>
+                                <rect key="frame" x="-9" y="92" width="414" height="718"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="yo8-r7-AyU" kind="embed" id="Dva-MR-vEM"/>

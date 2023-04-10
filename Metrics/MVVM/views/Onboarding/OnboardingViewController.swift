@@ -32,14 +32,14 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         
         slides = [
-        OnboardingSlide(title: "Take Live 3D Measurements & Submit", description: "We will help you through creating & capturing rooms", image: #imageLiteral(resourceName: "image-removebg-preview")),
-        OnboardingSlide(title: "Take Live 3D Measurements & Submit", description: "We will help you through creating & capturing rooms", image: #imageLiteral(resourceName: "Image 1")),
-        OnboardingSlide(title: "Take Live 3D Measurements & Submit", description: "We will help you through creating & capturing rooms", image: #imageLiteral(resourceName: "Image"))
+        OnboardingSlide(title: "Take Live 3D Measurements & Submit", description: "We will help you through creating & capturing rooms", image: #imageLiteral(resourceName: "people-using-aumented-reality-smartphones_23-2148779102")),
+        OnboardingSlide(title: "Take Live 3D Measurements & Submit", description: "We will help you through creating & capturing rooms", image: #imageLiteral(resourceName: "4738622")),
+        OnboardingSlide(title: "Take Live 3D Measurements & Submit", description: "We will help you through creating & capturing rooms", image: #imageLiteral(resourceName: "4805873"))
         ]
         
     }
     
-
+    
     @IBAction func nextBtnClicked(_ sender: UIButton) {
         if currentPage == slides.count - 1 {
             if let controller = storyboard?.instantiateViewController(withIdentifier: "tabBarController") {

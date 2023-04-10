@@ -62,6 +62,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         models.append(Section(title: "General", options: [
             .switchCell(model: SettingsSwitchOption(title: "Dark Mode", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemRed, handler: {
                 
+                
             }, isOn: true)),
             .staticCell(model: Settingsoption(title: "Location Access", icon: UIImage(systemName: "location"), iconBackgroundColor: .black){
                 
